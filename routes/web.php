@@ -1,17 +1,17 @@
 <?php
 
+use App\Http\Controllers\LandingController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
-});
+// ruta principal que muestra la página de inicio ---------------------------------------------
+// --------------------------------------------------------------------------------------------
+Route::get('/', [LandingController::class, 'index'])->name('landing.index');
+Route::get('/productos', [LandingController::class, 'products'])->name('landing.products');
+Route::get('/quienes-somos', [LandingController::class, 'whoWeAre'])->name('landing.whoWeAre');
+Route::get('/contacto', [LandingController::class, 'contact'])->name('landing.contact');
+
 
 Route::middleware([
     'auth:sanctum',
