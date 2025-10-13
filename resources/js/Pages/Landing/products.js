@@ -19,6 +19,14 @@ import selloFlejeDentado from '@/../../public/images/products/sello-dentado.png'
 import tensionadoraYbicoP262 from '@/../../public/images/products/tensionadora-1101-p262-plastico.jpg';
 import tensionadoraYbicoS290 from '@/../../public/images/products/tensionadora-1121-s290-acero.jpg';
 import tensionadoraYbicoS298 from '@/../../public/images/products/tensionadora-1122-s298-acero.jpg';
+import tensionadoraYbicoS210 from '@/../../public/images/products/tensionadora-1123-s210-acero.jpg';
+import tensionadoraYbicoS220 from '@/../../public/images/products/tensionadora-fleje-ybico-s220.png';
+import tensionadoraYbicoS225 from '@/../../public/images/products/tensionadora-1125-s225-acero.jpg';
+import tensionadoraYbicoS260 from '@/../../public/images/products/tensionadora-ybico-s260.png';
+import tensionadoraYbicoS262 from '@/../../public/images/products/tensionadora-1127-s262-acero.jpg';
+import tensionadoraYbicoS283 from '@/../../public/images/products/tensionadora-1128-s283-acero.jpg';
+import tensionadoraYbicoS240 from '@/../../public/images/products/tensionadora-1130-s240-acero.jpg';
+import tensionadoraYbicoS244 from '@/../../public/images/products/tensionadora-1131-s244-acero.jpg';
 import tensionadoraYbicoP472 from '@/../../public/images/products/tensionadora-1103-p472-plastico.jpg';
 import tensionadoraYbicoP117 from '@/../../public/images/products/tensionadora-1104-p117-plastico.jpg';
 import tensionadoraYbicoP173 from '@/../../public/images/products/tensionadora-Ybico-P-173.jpg';
@@ -29,6 +37,13 @@ import tensionadoraEpacHG110R from '@/../../public/images/products/tensionadora-
 // Selladoras
 import selladoraYbicoC3004 from '@/../../public/images/products/selladora-1111-c3004-1112-c3005.png';
 import selladoraYbicoC5004 from '@/../../public/images/products/selladora-1113-c5004-1114-c5005.jpg';
+import selladoraTranspakH35 from '@/../../public/images/products/selladora-Transpak-H-35.png';
+
+// Cortadores
+import cortadorYbicoH201 from '@/../../public/images/products/cortadora-ybico-H-201.png';
+import cortadorYbicoH305 from '@/../../public/images/products/cortadora-ybico-H-305.png';
+import cortadorYbicoHGC002 from '@/../../public/images/products/cortadora-epac-HGC002.png';
+import cortadorYbicoH410 from '@/../../public/images/products/cortadora-ybico-H-410.png';
 
 /**
  * Genera un slug a partir de un string.
@@ -117,7 +132,7 @@ export const allProducts = [
         images: [tensionadoraYbicoP262],
         details: [
             { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'P-262' },
-            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '1.200 Kg' }, {label: 'Longitud', value: '245mm'}
+            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '1.200 Kg' }, {label: 'Longitud', value: '245 mm'}
         ],
     },
     {
@@ -128,7 +143,7 @@ export const allProducts = [
         images: [tensionadoraYbicoP472],
         details: [
             { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'P-472' },
-            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '2.300 Kg' }, {label: 'Longitud', value: '340mm'}
+            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '2.300 Kg' }, {label: 'Longitud', value: '340 mm'}
         ],
     },
     {
@@ -139,7 +154,7 @@ export const allProducts = [
         images: [tensionadoraYbicoP117],
         details: [
             { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'P-472' },
-            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '2.200 Kg' }, {label: 'Longitud', value: '300mm'}
+            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '2.200 Kg' }, {label: 'Longitud', value: '300 mm'}
         ],
     },
     {
@@ -183,7 +198,7 @@ export const allProducts = [
         images: [tensionadoraEpacHG110R],
         details: [
             { label: 'Marca', value: 'Epac' }, { label: 'Modelo', value: 'HG110R' },
-            { label: 'Origen', value: 'China' }, { label: 'Peso', value: '2.200 Kg' }, {label: 'Longitud', value: '300mm'}
+            { label: 'Origen', value: 'China' }, { label: 'Peso', value: '2.200 Kg' }, {label: 'Longitud', value: '300 mm'}
         ],
     },
     {
@@ -194,7 +209,7 @@ export const allProducts = [
         images: [selladoraYbicoC3004],
         details: [
             { label: 'Marca', value: 'Ybico' }, { label: 'Modelos', value: 'C-3004, C-3005' }, 
-            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '1.650 Kg' }, {label: 'Longitud', value: '400mm'}
+            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '1.650 Kg' }, {label: 'Longitud', value: '400 mm'}
         ],
     },
     {
@@ -205,18 +220,161 @@ export const allProducts = [
         images: [selladoraYbicoC5004],
         details: [
             { label: 'Marca', value: 'Ybico' }, { label: 'Modelos', value: 'C-3004, C-3005' },
-            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '2.000 Kg' }, {label: 'Longitud', value: '510mm'},
+            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '2.000 Kg' }, {label: 'Longitud', value: '510 mm'},
         ],
     },
     {
-        id: 8,
+        id: 14,
+        name: 'Selladora Transpak H-35',
+        category: 'Equipos para Flejar',
+        description: 'Selladora cromada con 3 mordazas de acero y Mango de 390 mm de Longitud, para sellos de 1/2".',
+        images: [selladoraTranspakH35],
+        details: [
+            { label: 'Marca', value: 'Transpak' }, { label: 'Modelos', value: 'H-35' },
+            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '1.500 Kg' }, {label: 'Longitud', value: '390 mm'},
+        ],
+    },
+    {
+        id: 15,
         name: 'Tensionadora para Fleje de Acero Ybico S-290',
         category: 'Equipos para Flejar',
         description: 'Tensionadora para uso normal en fleje de acero. Permite anchos desde 3/8" hasta 3/4" y espesor de 0.035".',
         images: [tensionadoraYbicoS290],
         details: [
             { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'S-290' },
-            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '2.000 Kg' },
+            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '2.000 Kg' }, {label: 'Longitud', value: '365 mm'}
+        ],
+    },
+    {
+        id: 16,
+        name: 'Tensionadora para Fleje de Acero Ybico S-298',
+        category: 'Equipos para Flejar',
+        description: 'Tensionadora para uso rudo. Permite flejar anchos desde 3/4" hasta 1-1/4" y espesor de 0.035"',
+        images: [tensionadoraYbicoS298],
+        details: [
+            { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'S-298' },
+            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '3.500 Kg' }, {label: 'Longitud', value: '480 mm'}
+        ],
+    },
+    {
+        id: 17,
+        name: 'Tensionadora para Fleje de Acero Ybico S-210',
+        category: 'Equipos para Flejar',
+        description: 'Tensionadora de cremallera para empaques redondos o irregulares. Permite flejar anchos de fleje desde 3/8" hasta 3/4" y espesor de 0.020"',
+        images: [tensionadoraYbicoS210],
+        details: [
+            { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'S-210' },
+            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '1.500 Kg' }, {label: 'Longitud', value: '250 mm'}
+        ],
+    },
+    {
+        id: 18,
+        name: 'Tensionadora para Fleje de Acero Ybico S-220',
+        category: 'Equipos para Flejar',
+        description: 'Tensionadora de cremallera. Permite flejar anchos de fleje desde 3/8" hasta 3/4" y espesor máximo de 0.030"',
+        images: [tensionadoraYbicoS220],
+        details: [
+            { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'S-220' },
+            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '2.100 Kg' }, {label: 'Longitud', value: '350 mm'}
+        ],
+    },
+    {
+        id: 19,
+        name: 'Tensionadora para Fleje de Acero Ybico S-225',
+        category: 'Equipos para Flejar',
+        description: 'Tensionadora de cremallera. Permite flejar anchos de fleje desde 3/8" hasta 3/4" y espesor máximo de 0.030"',
+        images: [tensionadoraYbicoS225],
+        details: [
+            { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'S-225' },
+            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '2.100 Kg' }, {label: 'Longitud', value: '350 mm'}
+        ],
+    },
+    {
+        id: 20,
+        name: 'Tensionadora para Fleje de Acero Ybico S-260',
+        category: 'Equipos para Flejar',
+        description: 'Tensionadora forjada con cortador para fleje de acero inoxidable. Permite flejar anchos de fleje desde 3/8" hasta 3/4" y espesor máximo de 0.030"',
+        images: [tensionadoraYbicoS260],
+        details: [
+            { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'S-225' },
+            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '1.700 Kg' }, {label: 'Longitud', value: '280 mm'}
+        ],
+    },
+    {
+        id: 21,
+        name: 'Tensionadora para Fleje de Acero Ybico S-262 / HG-S1',
+        category: 'Equipos para Flejar',
+        description: 'Tensionadora forjada con cortador para fleje de acero inoxidable. Tipo BAND-IT permite flejar anchos de fleje desde 3/8" hasta 3/4" y espesor máximo de 0.030" (Todas las partes templadas)',
+        images: [tensionadoraYbicoS262],
+        details: [
+            { label: 'Marca', value: 'Ybico/E-pac' }, { label: 'Modelo', value: 'S-225' },
+            { label: 'Origen', value: 'Taiwán/China' }, { label: 'Peso', value: '1.700 Kg' }, {label: 'Longitud', value: '280 mm'}
+        ],
+    },
+    {
+        id: 22,
+        name: 'Tensionadora para Fleje de Acero Ybico S-283',
+        category: 'Equipos para Flejar',
+        description: 'Tensionadora forjada con cortador para fleje de acero inoxidable. Tipo BAND-IT permite flejar anchos de fleje desde 3/8" hasta 3/4" y espesor máximo de 0.030" (Todas las partes templadas)',
+        images: [tensionadoraYbicoS283],
+        details: [
+            { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'S-283' },
+            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '0.320 Kg' }, {label: 'Longitud', value: '220 mm'}
+        ],
+    },
+    {
+        id: 23,
+        name: 'Tensionadora para Fleje de Acero Ybico S-240',
+        category: 'Equipos para Flejar',
+        description: 'Tensionadora Para Fleje de Acero Inoxidable con Cortador y Martillo para superficies irregulares. Para Flejes de 3/8" a 3/4" y espesor Máximo de 0.030"',
+        images: [tensionadoraYbicoS240],
+        details: [
+            { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'S-240' },
+            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '1.450 Kg' }
+        ],
+    },
+    {
+        id: 24,
+        name: 'Tensionadora para Fleje de Acero Ybico S-244',
+        category: 'Equipos para Flejar',
+        description: 'Tensionadora Para Fleje de Acero Inoxidable con Cortador para superficies irregulares. Para Flejes de 3/8" a 3/4" y espesor Máximo de 0.030"',
+        images: [tensionadoraYbicoS244],
+        details: [
+            { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'S-244' },
+            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '1.450 Kg' }
+        ],
+    },
+    {
+        id: 25,
+        name: 'Cortadora para Fleje de Acero Ybico H-201',
+        category: 'Equipos para Flejar',
+        description: 'Cortador para fleje de acero. Fabricado en acero forjado. Permite cortar flejes con anchos desde 3/8" hasta 1-1/4" en un espesor de 0.031"',
+        images: [cortadorYbicoH201],
+        details: [
+            { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'H-201' },
+            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '0.800 Kg' }, {label: 'Longitud', value: '320 mm'}
+        ],
+    },
+    {
+        id: 26,
+        name: 'Cortadora para Fleje de Acero Ybico H-305/HGC002',
+        category: 'Equipos para Flejar',
+        description: 'Cortador para fleje de acero. Fabricado en acero forjado para uso rudo. Acondicionado para cortar flejes con anchos de hasta 2" en un espesor de 0.050"',
+        images: [cortadorYbicoH305, cortadorYbicoHGC002],
+        details: [
+            { label: 'Marca', value: 'Ybico/E-pac' }, { label: 'Modelo', value: 'H-305/HGC002' },
+            { label: 'Origen', value: 'Taiwán/China' }, { label: 'Peso', value: '2.800 Kg' }, {label: 'Longitud', value: '660 mm'}
+        ],
+    },
+    {
+        id: 27,
+        name: 'Cortadora para Fleje de Acero Ybico H-410',
+        category: 'Equipos para Flejar',
+        description: 'Cortador para fleje de acero. Fabricado en acero forjado para uso rudo. Acondicionado para cortar flejes con anchos de hasta 2" en un espesor de 0.050". Con Navaja Reversible',
+        images: [cortadorYbicoH410],
+        details: [
+            { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'H-410' },
+            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '2.900 Kg' }, {label: 'Longitud', value: '650 mm'}
         ],
     },
     {
