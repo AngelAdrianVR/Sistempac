@@ -38,12 +38,31 @@ import tensionadoraEpacHG110R from '@/../../public/images/products/tensionadora-
 import selladoraYbicoC3004 from '@/../../public/images/products/selladora-1111-c3004-1112-c3005.png';
 import selladoraYbicoC5004 from '@/../../public/images/products/selladora-1113-c5004-1114-c5005.jpg';
 import selladoraTranspakH35 from '@/../../public/images/products/selladora-Transpak-H-35.png';
+import selladoraYbicoC3103 from '@/../../public/images/products/selladora-acero-1141-c3103.jpg';
+import selladoraYbicoC3203 from '@/../../public/images/products/selladora-acero-1146-c3203-1147-c3204-1148-c3205-1149-c3206.jpg';
+import selladoraYbicoC3180 from '@/../../public/images/products/selladora-acero-1145-c3180.jpg';
+import selladoraYbicoC3160 from '@/../../public/images/products/selladora-acero-1150-c3160.jpg';
 
 // Cortadores
 import cortadorYbicoH201 from '@/../../public/images/products/cortadora-ybico-H-201.png';
 import cortadorYbicoH305 from '@/../../public/images/products/cortadora-ybico-H-305.png';
 import cortadorYbicoHGC002 from '@/../../public/images/products/cortadora-epac-HGC002.png';
 import cortadorYbicoH410 from '@/../../public/images/products/cortadora-ybico-H-410.png';
+
+// Despachadores
+import despachadorExcellEC213 from '@/../../public/images/products/despachador-cinta-excell-ec213.png';
+import despachadorExcellEC238 from '@/../../public/images/products/despachador-reforzado-cinta-2-y-3-ec238.jpg';
+import despachadorEpak from '@/../../public/images/products/despachador-epack.png';
+
+// Cierrabolsas
+import cierrabolsasExcell1 from '@/../../public/images/products/cierra-bolsa-cinta-1-2-ex-605k-v2.jpg';
+import cierrabolsasExcell2 from '@/../../public/images/products/cierra-bolsa-cinta-5-8-1712-ex808kjpg.jpg';
+
+// Aplicadores
+import aplicadorExcell from '@/../../public/images/products/sf-2781e.png';
+import aplicadorManualExcell from '@/../../public/images/products/sf-755-hand-saver.png';
+import aplicadorManualExcell2 from '@/../../public/images/products/sd-750a.png';
+
 
 /**
  * Genera un slug a partir de un string.
@@ -378,18 +397,51 @@ export const allProducts = [
         ],
     },
     {
-        id: 9,
+        id: 28,
         name: 'Selladora para Fleje de Acero Ybico',
         category: 'Equipos para Flejar',
-        description: 'Selladora con doble mordaza de acero templado. Disponible para anchos de 3/8", 1/2", 5/8" y 3/4".',
-        images: ['/images/products/placeholder.png'],
+        description: 'Selladora con doble mordaza de acero templado. 4 medidas para cada ancho de fleje, 3/8", 1/2", 5/8" y 3/4" y espesor de 0.025"',
+        images: [selladoraYbicoC3103],
         details: [
-            { label: 'Marca', value: 'Ybico' }, { label: 'Modelos', value: 'C-3103, C-3104, C-3105, C-3106' },
-            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '0.900 Kg' },
+            { label: 'Marca', value: 'Ybico/Epac' }, { label: 'Modelos Ybico', value: 'C-3103, C-3104, C-3105, C-3106' }, { label: 'Modelos Epac', value: 'HGB811-12, HGB811-58' },
+            { label: 'Origen', value: 'Taiwán/China' }, { label: 'Peso', value: '0.900 Kg' }, {label: 'Longitud', value: '340 mm'}
         ],
     },
     {
-        id: 10,
+        id: 29,
+        name: 'Selladora para Fleje de Acero Ybico',
+        category: 'Equipos para Flejar',
+        description: 'Selladora maneral largo con doble mordaza de acero templado. 4 medidas para cada ancho de fleje, 3/8", 1/2", 5/8" y 3/4" y espesor de 0.025"',
+        images: [selladoraYbicoC3203],
+        details: [
+            { label: 'Marca', value: 'Ybico' }, { label: 'Modelos', value: 'C-3203, C-3204, C-3205, C-3206' },
+            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '0.900 Kg' }, {label: 'Longitud', value: '350 mm'}
+        ],
+    },
+    {
+        id: 30,
+        name: 'Selladora para Fleje de Acero Ybico C-3180',
+        category: 'Equipos para Flejar',
+        description: 'Selladora para uso rudo con doble mordaza de acero tratado. Permite anchos de fleje de 1-1/4" y espesor de 0.035" Sellado lateral',
+        images: [selladoraYbicoC3180],
+        details: [
+            { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'C-3180' },
+            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '2.900 Kg' }, {label: 'Longitud', value: '730 mm'}
+        ],
+    },
+    {
+        id: 31,
+        name: 'Selladora para Fleje de Acero Ybico C-3160',
+        category: 'Equipos para Flejar',
+        description: 'Selladora para uso rudo con doble mordaza de acero tratado. Permite anchos de fleje de 3/4" y espesor de 0.035" Sellado lateral',
+        images: [selladoraYbicoC3160],
+        details: [
+            { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'C-3160' },
+            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '2.400 Kg' }, {label: 'Longitud', value: '660 mm'}
+        ],
+    },
+    {
+        id: 32,
         name: 'Flejadora de Combinación para Acero Ybico SL 200',
         category: 'Equipos para Flejar',
         description: 'No necesita sello. Para fleje de acero de 1/2", 5/8" y 3/4" con espesores de 0.017" a 0.035".',
@@ -400,7 +452,7 @@ export const allProducts = [
         ],
     },
     {
-        id: 11,
+        id: 33,
         name: 'Portarrollo Importado',
         category: 'Equipos para Flejar',
         description: 'Portarrollo para fleje de plástico o acero, con mecanismo de freno, disco de metal y bandeja.',
@@ -411,25 +463,38 @@ export const allProducts = [
             { label: 'Centros', value: '8" y 16" de diámetro' },
         ],
     },
+
     // Equipos de Empaque
     {
-        id: 12,
-        name: 'Despachador de Cinta Excell',
+        id: 34,
+        name: 'Despachador de cinta de 2" y 3"',
         category: 'Equipos de Empaque',
-        description: 'Despachador para cinta de empaque con marco metálico, freno ajustable y doble navaja con protección. Disponible para 2" y 3".',
-        images: ['/images/products/placeholder.png', '/images/products/placeholder_alt.png'],
+        description: 'Despachador cinta empaque . Marco Metálico. Sistema de freno ajustable, doble navaja con protección. Tira estática',
+        images: [despachadorExcellEC213, despachadorExcellEC238],
         details: [
-            { label: 'Marca', value: 'Excell' },
-            { label: 'Modelos', value: 'EC-213 (2"), EC-313 (3")' },
-            { label: 'Origen', value: 'Taiwán' },
+            { label: 'Marca', value: 'Excell' }, { label: 'Modelos de Excell (2")', value: 'EC-213, ET-267, EC-238' },
+            { label: 'Modelos de Excell (3")', value: 'EC-313, EC-338' },
+            { label: 'Origen', value: 'Taiwán' }
         ],
     },
     {
-        id: 13,
+        id: 35,
+        name: 'Despachador de Cinta Excell',
+        category: 'Equipos de Empaque',
+        description: 'Despachador para cinta de empaque con marco metálico, freno ajustable y doble navaja con protección. Disponible para 2" y 3".',
+        images: [despachadorEpak],
+        details: [
+            { label: 'Marca', value: 'E-pac' },
+            { label: 'Modelos', value: 'HGTS001, HGTS002' },
+            { label: 'Origen', value: 'China' },
+        ],
+    },
+    {
+        id: 36,
         name: 'Cierrabolsas Excell',
         category: 'Equipos de Empaque',
         description: 'Cierrabolsas metálico con sistema de cuchilla cortadora. Para cintas de 1/2" (EX-605K) y 5/8" (EX-808K).',
-        images: ['/images/products/placeholder.png'],
+        images: [cierrabolsasExcell1, cierrabolsasExcell2],
         details: [
             { label: 'Marca', value: 'Excell' },
             { label: 'Modelos', value: 'EX-605K, EX-808K' },
@@ -437,15 +502,26 @@ export const allProducts = [
         ],
     },
     {
-        id: 14,
+        id: 37,
         name: 'Aplicador de Película Estirable',
         category: 'Equipos de Empaque',
         description: 'Aplicador para película con alma de 1.5", 2" y 3". Ajuste deslizable de 12" a 20".',
-        images: ['/images/products/placeholder.png'],
+        images: [aplicadorExcell],
         details: [
             { label: 'Marca', value: 'Excell / E-Pac' },
             { label: 'Modelos', value: 'SD 278E (Excell), BM500 (E-Pac)' },
-            { label: 'Peso', value: '2.1 Kg' },
+            { label: 'Peso', value: '2.1 Kg' }, { label: 'Longitud', value: '500 mm' }
+        ],
+    },
+    {
+        id: 38,
+        name: 'Aplicador de Película Manual',
+        category: 'Equipos de Empaque',
+        description: 'Aplicador de película de alma de 3". La tensión a la película es aplicada en forma manual.',
+        images: [aplicadorManualExcell, aplicadorManualExcell2],
+        details: [
+            { label: 'Marca', value: 'Excell / E-Pac' },
+            { label: 'Modelos', value: 'SD 255 y SD 7772 (Excell), FH-2723 (E-Pac)' },
         ],
     },
     // Selladoras Térmicas
