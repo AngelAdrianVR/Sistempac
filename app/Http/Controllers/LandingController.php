@@ -37,5 +37,50 @@ class LandingController extends Controller
         return Inertia::render('Landing/Contact');
     }
     
+    /**
+     * Procesa el formulario de contacto y redirige a WhatsApp.
+     *
+     * @param Request $request
+     * @return \Inertia\Response
+     */
+    public function sendContactMessage(Request $request)
+    {
+        // 1. Validamos los datos del formulario
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'phone' => 'nullable|string|max:20',
+            'message' => 'required|string|max:1000',
+        ]);
+
+        // 2. Define tu número de teléfono de WhatsApp aquí
+        // IMPORTANTE: Usa el código de país sin el "+" o "00". Ejemplo para México: 52133...
+        // $yourWhatsAppNumber = '5213312345678'; // correcto
+        $yourWhatsAppNumber = '5213312155731'; // de prueba 
+
+        // 3. Construimos el mensaje que se pre-llenará en WhatsApp
+        $name = $request->input('name');
+        $phone = $request->input('phone');
+        $email = $request->input('email');
+        $messageText = $request->input('message');
+
+        $fullMessage = "¡Hola! 👋 Vengo de tu sitio web.\n\n";
+        $fullMessage .= "*Nombre:* $name\n";
+        $fullMessage .= "*Email:* $email\n";
+        if ($phone) {
+            $fullMessage .= "*Teléfono:* $phone\n\n";
+        }
+        $fullMessage .= "*Mensaje:*\n$messageText";
+
+        // 4. Codificamos el mensaje para que sea seguro en una URL
+        $encodedMessage = urlencode($fullMessage);
+
+        // 5. Creamos la URL de WhatsApp
+        $whatsappUrl = "https://wa.me/{$yourWhatsAppNumber}?text={$encodedMessage}";
+
+        // 6. Usamos Inertia::location para forzar una redirección del lado del cliente a una URL externa.
+        // Esto abrirá la aplicación de WhatsApp o WhatsApp Web.
+        return Inertia::location($whatsappUrl);
+    }
 }
 

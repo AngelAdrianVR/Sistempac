@@ -11,6 +11,7 @@ Route::get('/', [LandingController::class, 'index'])->name('landing.index');
 Route::get('/productos', [LandingController::class, 'products'])->name('landing.products');
 Route::get('/quienes-somos', [LandingController::class, 'whoWeAre'])->name('landing.whoWeAre');
 Route::get('/contacto', [LandingController::class, 'contact'])->name('landing.contact');
+Route::post('/contact', [LandingController::class, 'sendContactMessage'])->name('contact.send'); // mandar mensaje de desde formulario de contacto
 
 
 Route::middleware([

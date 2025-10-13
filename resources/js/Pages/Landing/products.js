@@ -1,6 +1,35 @@
 // Este archivo funciona como una base de datos estática para los productos.
 // Se ha agregado la propiedad 'slug' para URLs amigables y se han añadido todos los productos del catálogo.
 
+// Fleje manual negro 
+import flejeNegro1 from '@/../../public/images/Products/fleje-de-plastico-manual-ultrex-1.jpg';
+import flejeNegro2 from '@/../../public/images/Products/fleje-de-plastico-manual-ultrex-2.png';
+import flejeNegroCajaCuadrada from '@/../../public/images/Products/fleje-de-plastico-caja-cuadrada-ultrex-codigo-b.jpg';
+import flejeNegroCajaOctagonal from '@/../../public/images/Products/fleje-de-plastico-caja-octagonal-ultrex-codigo-c.jpg';
+
+// Fleje prolipropileno virgen
+import flejeVirgen from '@/../../public/images/Products/fleje-virgen.jpg';
+
+// Sello para feje
+import selloFleje1 from '@/../../public/images/products/sello-para-fleje-1-2.jpg';
+import selloFleje2 from '@/../../public/images/products/sello-para-fleje-plastico-ultrex-1.jpg';
+import selloFlejeDentado from '@/../../public/images/products/sello-dentado.png';
+
+// Tensionadoras
+import tensionadoraYbicoP262 from '@/../../public/images/products/tensionadora-1101-p262-plastico.jpg';
+import tensionadoraYbicoS290 from '@/../../public/images/products/tensionadora-1121-s290-acero.jpg';
+import tensionadoraYbicoS298 from '@/../../public/images/products/tensionadora-1122-s298-acero.jpg';
+import tensionadoraYbicoP472 from '@/../../public/images/products/tensionadora-1103-p472-plastico.jpg';
+import tensionadoraYbicoP117 from '@/../../public/images/products/tensionadora-1104-p117-plastico.jpg';
+import tensionadoraYbicoP173 from '@/../../public/images/products/tensionadora-Ybico-P-173.jpg';
+import tensionadoraYbicoP278 from '@/../../public/images/products/tensionadora-1106-p278-plastico-cromo.jpg';
+import tensionadoraTranspak1 from '@/../../public/images/products/tensionadora-1501-h21-acero-transpak.jpg';
+import tensionadoraEpacHG110R from '@/../../public/images/products/tensionadora-de-fleje-HG110R.jpg';
+
+// Selladoras
+import selladoraYbicoC3004 from '@/../../public/images/products/selladora-1111-c3004-1112-c3005.png';
+import selladoraYbicoC5004 from '@/../../public/images/products/selladora-1113-c5004-1114-c5005.jpg';
+
 /**
  * Genera un slug a partir de un string.
  * @param {string} text - El texto a convertir.
@@ -33,7 +62,7 @@ export const allProducts = [
         name: 'Fleje de Plástico Manual',
         category: 'Flejes y Sellos',
         description: 'Fleje de poliéster reciclado para aplicación manual, ideal para aplicaciones generales y asegurar cargas. Disponible en varios anchos y espesores.',
-        images: ['/images/products/placeholder.png', '/images/products/placeholder_alt.png'],
+        images: [flejeNegro1, flejeNegro2, flejeNegroCajaCuadrada, flejeNegroCajaOctagonal],
         details: [
             { label: 'Material', value: 'Poliéster (PET) Reciclado' },
             { label: 'Anchos Disponibles', value: '3/8", 1/2", 5/8"' },
@@ -43,10 +72,10 @@ export const allProducts = [
     },
     {
         id: 2,
-        name: 'Fleje de Polipropileno Virgen (Máquina)',
+        name: 'Fleje de Polipropileno Virgen',
         category: 'Flejes y Sellos',
         description: 'Fleje de polipropileno 100% virgen para máquinas automáticas y semiautomáticas.',
-        images: ['/images/products/placeholder.png'],
+        images: [flejeVirgen],
         details: [
             { label: 'Material', value: 'Polipropileno 100% Virgen' },
             { label: 'Modelo FVA-38', value: 'Ancho 3/8", Resistencia 90 Kg, 2700 Mts/Rollo' },
@@ -59,7 +88,7 @@ export const allProducts = [
         name: 'Sellos Metálicos para Fleje de Plástico',
         category: 'Flejes y Sellos',
         description: 'Sello abierto galvanizado para fleje de plástico, disponible en varias medidas y presentaciones.',
-        images: ['/images/products/placeholder.png'],
+        images: [selloFleje1, selloFleje2],
         details: [
             { label: 'Material', value: 'Galvanizado' },
             { label: 'Anchos', value: '3/8", 1/2", 5/8", 3/4"' },
@@ -72,7 +101,7 @@ export const allProducts = [
         name: 'Sellos para Fleje de Poliéster Dentado',
         category: 'Flejes y Sellos',
         description: 'Sellos con interior especialmente diseñado para un mejor agarre en fleje de poliéster.',
-        images: ['/images/products/placeholder.png'],
+        images: [selloFlejeDentado],
         details: [
             { label: 'Modelo SPF-12', value: 'Ancho 1/2", Calibre 22' },
             { label: 'Modelo SPF-58', value: 'Ancho 5/8", Calibre 20' },
@@ -85,32 +114,98 @@ export const allProducts = [
         name: 'Tensionadora Ybico P-262',
         category: 'Equipos para Flejar',
         description: 'Tensionadora de uso rudo con cuerpo de fundición y bujes de acero. Para fleje de plástico de hasta 3/4".',
-        images: ['/images/products/placeholder.png'],
+        images: [tensionadoraYbicoP262],
         details: [
             { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'P-262' },
-            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '1.200 Kg' },
+            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '1.200 Kg' }, {label: 'Longitud', value: '245mm'}
         ],
     },
     {
         id: 6,
+        name: 'Tensionadora Ybico P-472',
+        category: 'Equipos para Flejar',
+        description: 'Tensionadora de Aluminio Gigante para uso rudo,de fundición bujes autolubricados entre la base y el Enrollador. Para fleje demedidas hasta 3/4" a 1-1/2"',
+        images: [tensionadoraYbicoP472],
+        details: [
+            { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'P-472' },
+            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '2.300 Kg' }, {label: 'Longitud', value: '340mm'}
+        ],
+    },
+    {
+        id: 7,
+        name: 'Tensionadora Ybico P-117',
+        category: 'Equipos para Flejar',
+        description: 'Tensionadora para uso rudo, Cuerpo de metal de fundición con bujes de latón entre la base y el Enrollador. Para fleje demedidas hasta 3/4"',
+        images: [tensionadoraYbicoP117],
+        details: [
+            { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'P-472' },
+            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '2.200 Kg' }, {label: 'Longitud', value: '300mm'}
+        ],
+    },
+    {
+        id: 8,
+        name: 'Tensionadora Ybico P-278',
+        category: 'Equipos para Flejar',
+        description: 'Tensionadora de Uso Rudo Con Nariz Para Fleje de PET y Nylon.Ancho de Fleje Permitido 1". Ideal Para Superficies o Paquetes Irregulares',
+        images: [tensionadoraYbicoP278],
+        details: [
+            { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'P-472' },
+            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '1.500 Kg' }
+        ],
+    },
+    {
+        id: 9,
+        name: 'Tensionadora Ybico P-173',
+        category: 'Equipos para Flejar',
+        description: 'Restirador y cortador manual para usarse con la hebilla de plástico.',
+        images: [tensionadoraYbicoP173],
+        details: [
+            { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'P-472' },
+            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '0.100 Kg' }
+        ],
+    },
+    {
+        id: 10,
         name: 'Tensionadora Transpak H-21',
         category: 'Equipos para Flejar',
         description: 'Tensionadora para uso rudo, cuerpo de metal de fundición. Para fleje de plástico de hasta 3/4".',
-        images: ['/images/products/placeholder.png'],
+        images: [tensionadoraTranspak1],
         details: [
             { label: 'Marca', value: 'Transpak' }, { label: 'Modelo', value: 'H-21' },
             { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '2.200 Kg' },
         ],
     },
     {
-        id: 7,
+        id: 11,
+        name: 'Tensionadora Epac HG110R',
+        category: 'Equipos para Flejar',
+        description: 'Tensionadora para uso Pesado (16010) o Liviano (16011), Cuerpo de metal de fundición. Para fleje de medidas hasta 3/4"',
+        images: [tensionadoraEpacHG110R],
+        details: [
+            { label: 'Marca', value: 'Epac' }, { label: 'Modelo', value: 'HG110R' },
+            { label: 'Origen', value: 'China' }, { label: 'Peso', value: '2.200 Kg' }, {label: 'Longitud', value: '300mm'}
+        ],
+    },
+    {
+        id: 12,
         name: 'Selladora Ybico C-3004 / C-3005',
         category: 'Equipos para Flejar',
         description: 'Selladora cromada con mordazas de acero y forros de PVC. Para sellos de 1/2" (C-3004) y 5/8" (C-3005).',
-        images: ['/images/products/placeholder.png'],
+        images: [selladoraYbicoC3004],
+        details: [
+            { label: 'Marca', value: 'Ybico' }, { label: 'Modelos', value: 'C-3004, C-3005' }, 
+            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '1.650 Kg' }, {label: 'Longitud', value: '400mm'}
+        ],
+    },
+    {
+        id: 13,
+        name: 'Selladora Ybico C-5004 / C-5005',
+        category: 'Equipos para Flejar',
+        description: 'Selladora cromada con mordazas de acero y forros de PVC. Para sellos de 1/2" (C-3004) y 5/8" (C-3005).',
+        images: [selladoraYbicoC5004],
         details: [
             { label: 'Marca', value: 'Ybico' }, { label: 'Modelos', value: 'C-3004, C-3005' },
-            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '1.650 Kg' },
+            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '2.000 Kg' }, {label: 'Longitud', value: '510mm'},
         ],
     },
     {
@@ -118,7 +213,7 @@ export const allProducts = [
         name: 'Tensionadora para Fleje de Acero Ybico S-290',
         category: 'Equipos para Flejar',
         description: 'Tensionadora para uso normal en fleje de acero. Permite anchos desde 3/8" hasta 3/4" y espesor de 0.035".',
-        images: ['/images/products/placeholder.png'],
+        images: [tensionadoraYbicoS290],
         details: [
             { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'S-290' },
             { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '2.000 Kg' },
