@@ -52,7 +52,13 @@ import cortadorYbicoH410 from '@/../../public/images/products/cortadora-ybico-H-
 // Despachadores
 import despachadorExcellEC213 from '@/../../public/images/products/despachador-cinta-excell-ec213.png';
 import despachadorExcellEC238 from '@/../../public/images/products/despachador-reforzado-cinta-2-y-3-ec238.jpg';
-import despachadorEpak from '@/../../public/images/products/despachador-epack.png';
+import despachadorEpac from '@/../../public/images/products/despachador-epack.png';
+import despachadorExceell1 from '@/../../public/images/products/despachador-etiquetas-1729-ld818.jpg';
+import despachadorExceell2 from '@/../../public/images/products/despachador-fijo-cintas-1725-et191.jpg';
+import despachadorExceell3 from '@/../../public/images/products/despachador-fijo-cintas-1726-et112-300x300.jpg';
+import despachadorExceell4 from '@/../../public/images/products/despachador-fijo-masking-tape-1727-et168.jpg';
+import despachadorExceell5 from '@/../../public/images/products/despachador-fijo-multi-cintas-1728-et337-300x300.jpg';
+import despachadorExceell6 from '@/../../public/images/products/despachador-vegetales-1730-et-635.jpg';
 
 // Cierrabolsas
 import cierrabolsasExcell1 from '@/../../public/images/products/cierra-bolsa-cinta-1-2-ex-605k-v2.jpg';
@@ -62,6 +68,23 @@ import cierrabolsasExcell2 from '@/../../public/images/products/cierra-bolsa-cin
 import aplicadorExcell from '@/../../public/images/products/sf-2781e.png';
 import aplicadorManualExcell from '@/../../public/images/products/sf-755-hand-saver.png';
 import aplicadorManualExcell2 from '@/../../public/images/products/sd-750a.png';
+
+// Selladoras termicas
+import selladoraTermicaEstandar from '@/../../public/images/products/selladora-termica-estandar-2351-st15.jpg';
+import selladoraTermicaReforzada from '@/../../public/images/products/selladora-termica-reforzada-2351-st15.jpg';
+import pistolaIndustrialReforzada from '@/../../public/images/products/pistola-royal.png';
+import selladoraElectronica1 from '@/../../public/images/products/selladora-termica-electronica.jpg';
+import selladoraElectronica2 from '@/../../public/images/products/selladora-termica-electronica-mod-xp.jpg';
+
+// Engrapadoras
+import engrapadoraNeumaticaThink from '@/../../public/images/products/adcsy-19-no-mark.jpg';
+import engrapadoraMecanicaThink from '@/../../public/images/products/hdcsn-19.jpg';
+
+// Maquinas flejadoras
+import maquinaFLejadoraSemiautomatica from '@/../../public/images/products/maquina-flejadora-semiautomatica-1810-tp201.jpg';
+import maquinaFLejadoraAutomaticaBrother from '@/../../public/images/products/maquina-flejadora-automatica-brother.png';
+import maquinaFLejadoraAutomaticaBrother2 from '@/../../public/images/products/maquina-flejadora-automatica-brother2.png';
+import flejadoraPortatilSemiautomaticaEpac from '@/../../public/images/products/flejadora-portatil-semiautomatica-epac.png';
 
 
 /**
@@ -482,7 +505,7 @@ export const allProducts = [
         name: 'Despachador de Cinta Excell',
         category: 'Equipos de Empaque',
         description: 'Despachador para cinta de empaque con marco metálico, freno ajustable y doble navaja con protección. Disponible para 2" y 3".',
-        images: [despachadorEpak],
+        images: [despachadorEpac],
         details: [
             { label: 'Marca', value: 'E-pac' },
             { label: 'Modelos', value: 'HGTS001, HGTS002' },
@@ -491,6 +514,18 @@ export const allProducts = [
     },
     {
         id: 36,
+        name: 'Despachadores de Cinta Excell',
+        category: 'Equipos de Empaque',
+        description: 'Despachador para cinta desde 1" a 3".',
+        images: [despachadorExceell1, despachadorExceell2, despachadorExceell3, despachadorExceell4, despachadorExceell5, despachadorExceell6],
+        details: [
+            { label: 'Marca', value: 'Excell' },
+            { label: 'Modelos', value: 'ET-191, ET-112, ET-168, ET-337, ET-635, LD-818' },
+            { label: 'Origen', value: 'Taiwán' },
+        ],
+    },
+    {
+        id: 37,
         name: 'Cierrabolsas Excell',
         category: 'Equipos de Empaque',
         description: 'Cierrabolsas metálico con sistema de cuchilla cortadora. Para cintas de 1/2" (EX-605K) y 5/8" (EX-808K).',
@@ -502,7 +537,7 @@ export const allProducts = [
         ],
     },
     {
-        id: 37,
+        id: 38,
         name: 'Aplicador de Película Estirable',
         category: 'Equipos de Empaque',
         description: 'Aplicador para película con alma de 1.5", 2" y 3". Ajuste deslizable de 12" a 20".',
@@ -514,7 +549,7 @@ export const allProducts = [
         ],
     },
     {
-        id: 38,
+        id: 39,
         name: 'Aplicador de Película Manual',
         category: 'Equipos de Empaque',
         description: 'Aplicador de película de alma de 3". La tensión a la película es aplicada en forma manual.',
@@ -526,11 +561,11 @@ export const allProducts = [
     },
     // Selladoras Térmicas
     {
-        id: 15,
+        id: 40,
         name: 'Selladora Térmica Estándar',
         category: 'Selladoras Térmicas',
         description: 'Selladora manual de calor directo para bolsas de plástico. Disponible en varios anchos. Voltaje de 110V.',
-        images: ['/images/products/placeholder.png'],
+        images: [selladoraTermicaEstandar],
         details: [
             { label: 'Modelos', value: 'ST 15, ST 25, ST 35, ST 50' },
             { label: 'Anchos de sellado', value: '15, 25, 35, 50 cm' },
@@ -538,11 +573,35 @@ export const allProducts = [
         ],
     },
     {
-        id: 16,
+        id: 41,
+        name: 'Selladora Térmica Reforzada',
+        category: 'Selladoras Térmicas',
+        description: 'Cuerpo reforzado, switch de encendido y silicón en el sellador que permite una mayor calidad en el sellado',
+        images: [selladoraTermicaReforzada],
+        details: [
+            { label: 'Modelos', value: 'SR 15, SR 25, SR 35, SR 50' },
+            { label: 'Anchos de sellado', value: '15, 25, 35, 50 cm' },
+            { label: 'Voltaje', value: '110 V' },
+        ],
+    },
+    {
+        id: 42,
+        name: 'Pistola Industrial Reforzada',
+        category: 'Selladoras Térmicas',
+        description: 'Una vez que su producto esté embolsado en polietileno encojible, PVC. o poliolefina, la pistola de aire caliente sirve para hacer el encojimiento, por medio de aire caliente, con capacidad de trabajo industrial',
+        images: [pistolaIndustrialReforzada],
+        details: [
+            { label: 'Modelo', value: 'PI-01' },
+            { label: 'Marca', value: 'Royal' },
+            { label: 'Peso', value: '0.900 Kg' }, {label: 'Longitud', value: '335 mm'}
+        ],
+    },
+    {
+        id: 43,
         name: 'Selladora Térmica Electrónica Hanna',
         category: 'Selladoras Térmicas',
         description: 'Selladora con tarjeta electrónica de alta tecnología, sella polietileno, PVC y polipropileno en 1.5 seg.',
-        images: ['/images/products/placeholder.png'],
+        images: [selladoraElectronica1, selladoraElectronica2],
         details: [
             { label: 'Marca', value: 'Hanna' },
             { label: 'Modelos', value: 'NT 200/2, NT-300/2, XP-200-5, etc.' },
@@ -551,11 +610,11 @@ export const allProducts = [
     },
     // Engrapadoras
     {
-        id: 17,
+        id: 44,
         name: 'Engrapadora Neumática Tking',
         category: 'Engrapadoras',
         description: 'Diseñada para trabajar a alta velocidad. Retorno de martillo automático y presión y profundidad de engrape ajustable.',
-        images: ['/images/products/placeholder.png'],
+        images: [engrapadoraNeumaticaThink],
         details: [
             { label: 'Marca', value: 'Tking' },
             { label: 'Modelo', value: 'ADCS19' },
@@ -563,11 +622,11 @@ export const allProducts = [
         ],
     },
     {
-        id: 18,
+        id: 45,
         name: 'Engrapadora Mecánica Tking',
         category: 'Engrapadoras',
         description: 'Puede engrapar miles de veces sin requerir mantenimiento. Excelente inversión económica.',
-        images: ['/images/products/placeholder.png'],
+        images: [engrapadoraMecanicaThink],
         details: [
             { label: 'Marca', value: 'Tking' },
             { label: 'Modelo', value: 'HDCSN1935' },
@@ -576,11 +635,11 @@ export const allProducts = [
     },
     // Máquinas Flejadoras
     {
-        id: 19,
+        id: 46,
         name: 'Máquina Flejadora Semiautomática Transpak',
         category: 'Máquinas Flejadoras',
         description: 'Máquina con tecnología taiwanesa, control de tensión exterior y compatible con flejes de 1/4" a 5/8".',
-        images: ['/images/products/placeholder.png'],
+        images: [maquinaFLejadoraSemiautomatica],
         details: [
             { label: 'Marca', value: 'Transpak' },
             { label: 'Modelo', value: 'TP-201' },
@@ -589,15 +648,41 @@ export const allProducts = [
         ],
     },
     {
-        id: 20,
-        name: 'Máquina Flejadora Automática Brother',
+        id: 47,
+        name: 'Máquina Flejadora Automática Brother WG-22XN',
         category: 'Máquinas Flejadoras',
         description: 'Máquina flejadora automática con tecnología china. Medida del arco 800 x 600 mm.',
-        images: ['/images/products/placeholder.png'],
+        images: [maquinaFLejadoraAutomaticaBrother],
         details: [
             { label: 'Marca', value: 'Brother' },
             { label: 'Modelos', value: 'WG 22 XN, AP 8060' },
             { label: 'Voltaje', value: '220/230 Volts' },
+        ],
+    },
+    {
+        id: 48,
+        name: 'Máquina Flejadora Automática Brother AP-8060',
+        category: 'Máquinas Flejadoras',
+        description: 'Máquina flejadora automática con tecnología china. Medida del arco 800 x 600 mm.',
+        images: [maquinaFLejadoraAutomaticaBrother2],
+        details: [
+            { label: 'Marca', value: 'Brother' },
+            { label: 'Modelos', value: 'WG 22 XN, AP 8060' },
+            { label: 'Voltaje', value: '220/230 Volts' },
+        ],
+    },
+    {
+        id: 49,
+        name: 'Flejadora Semi-Automática Epac JDH-16',
+        category: 'Máquinas Flejadoras',
+        description: 'MPuede usarse en Flejes de Polipropileno o PET (Liso o Embosado) Medidas de Fleje Permitido: 13-16 mm Esp 0.4-1.2 mmTension: 60-2100 N (Ajustable)',
+        images: [flejadoraPortatilSemiautomaticaEpac],
+        details: [
+            { label: 'Marca', value: 'E-pac' },
+            { label: 'Modelo', value: 'JDH-16' },
+            { label: 'Voltaje', value: '110 V 60 HZ' },
+            { label: 'Dimensiones con Bateria', value: '330 x 138 x 168 mm' },
+            { label: 'Peso', value: '2.750 Kg' },
         ],
     },
     {
