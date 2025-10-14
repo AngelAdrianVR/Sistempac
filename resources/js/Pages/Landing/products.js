@@ -80,11 +80,26 @@ import selladoraElectronica2 from '@/../../public/images/products/selladora-term
 import engrapadoraNeumaticaThink from '@/../../public/images/products/adcsy-19-no-mark.jpg';
 import engrapadoraMecanicaThink from '@/../../public/images/products/hdcsn-19.jpg';
 
+// Portarrollos
+import portarollosImportados1 from '@/../../public/images/products/portarrollos-importados1.png';
+import portarollosImportados2 from '@/../../public/images/products/portarrollos-importados2.png';
+
+// Consumibles
+import emplaye from '@/../../public/images/products/pelicula-emplaye.png';
+import escuadra from '@/../../public/images/products/escuadra-protectora-estandar-ultrex.jpg';
+import hebillaDePlastico from '@/../../public/images/products/hebilla-para-fleje-de-plastico-estandar-ultrex-c.jpg';
+import grapasCobrizadas from '@/../../public/images/products/grapas-cobrizadas-3315u.jpg';
+import esquineroDePlastico from '@/../../public/images/products/esquinero-de-plastico-estandar-ultrex-ng.jpg';
+
 // Maquinas flejadoras
 import maquinaFLejadoraSemiautomatica from '@/../../public/images/products/maquina-flejadora-semiautomatica-1810-tp201.jpg';
 import maquinaFLejadoraAutomaticaBrother from '@/../../public/images/products/maquina-flejadora-automatica-brother.png';
 import maquinaFLejadoraAutomaticaBrother2 from '@/../../public/images/products/maquina-flejadora-automatica-brother2.png';
 import flejadoraPortatilSemiautomaticaEpac from '@/../../public/images/products/flejadora-portatil-semiautomatica-epac.png';
+import flejadoraPortatilAutomaticaEpac1 from '@/../../public/images/products/flejadora-automatica-Epac1.png';
+import flejadoraPortatilAutomaticaEpac2 from '@/../../public/images/products/flejadora-automatica-Epac2.png';
+import flejadoraCombinadaYbicoP1604 from '@/../../public/images/products/flejadora-combinacion-Ybico-p1604.png';
+import flejadoraCombinadaYbicoSL200 from '@/../../public/images/products/flejadora-combinacion-Ybico-sl200.png';
 
 
 /**
@@ -468,9 +483,9 @@ export const allProducts = [
         name: 'Flejadora de Combinación para Acero Ybico SL 200',
         category: 'Equipos para Flejar',
         description: 'No necesita sello. Para fleje de acero de 1/2", 5/8" y 3/4" con espesores de 0.017" a 0.035".',
-        images: ['/images/products/placeholder.png'],
+        images: [flejadoraCombinadaYbicoP1604, flejadoraCombinadaYbicoSL200],
         details: [
-            { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'SL 200' },
+            { label: 'Marca', value: 'Ybico' }, { label: 'Modelos', value: 'P-1604, SL 200' },
             { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '3.500 Kg' },
         ],
     },
@@ -479,7 +494,7 @@ export const allProducts = [
         name: 'Portarrollo Importado',
         category: 'Equipos para Flejar',
         description: 'Portarrollo para fleje de plástico o acero, con mecanismo de freno, disco de metal y bandeja.',
-        images: ['/images/products/placeholder.png'],
+        images: [portarollosImportados1, portarollosImportados2],
         details: [
             { label: 'Modelo', value: 'PRI-1 (Negro), PRI-2 (Azul/Amarillo)' },
             { label: 'Capacidad', value: '60 Kg.' }, { label: 'Peso', value: '16.0 Kg' },
@@ -541,7 +556,7 @@ export const allProducts = [
         name: 'Aplicador de Película Estirable',
         category: 'Equipos de Empaque',
         description: 'Aplicador para película con alma de 1.5", 2" y 3". Ajuste deslizable de 12" a 20".',
-        images: [aplicadorExcell],
+        images: [emplaye],
         details: [
             { label: 'Marca', value: 'Excell / E-Pac' },
             { label: 'Modelos', value: 'SD 278E (Excell), BM500 (E-Pac)' },
@@ -686,25 +701,40 @@ export const allProducts = [
         ],
     },
     {
-        id: 21,
+        id: 50,
         name: 'Flejadora Eléctrica Portátil Automática E-pac',
         category: 'Máquinas Flejadoras',
-        description: 'Puede usarse en flejes de Polipropileno o PET (Liso o Embosado). Sellado por fricción y tensión ajustable.',
-        images: ['/images/products/placeholder.png'],
+        description: 'Puede usarse en Flejes de Polipropileno o PET (Liso o Embosado) Medidas de Fleje Permitido: 13-16 mm Esp 0.4-1.2 mm. Tension: 600-2800 N (Ajustable). Sellado por friccion',
+        images: [flejadoraPortatilAutomaticaEpac1],
         details: [
             { label: 'Marca', value: 'E-pac' },
             { label: 'Modelo', value: 'JDC 13/16' },
-            { label: 'Batería', value: 'Recargable 110V' },
+            { label: 'Batería', value: 'Recargable 110V 60Hz' },
+            { label: 'Velocidad', value: '100-200 mm/s' },
             { label: 'Peso', value: '2.7 Kg' },
+        ],
+    },
+    {
+        id: 51,
+        name: 'Flejadora Eléctrica Portátil Automática E-pac',
+        category: 'Máquinas Flejadoras',
+        description: 'Puede usarse en Flejes de Polipropileno o PET (Liso o Embosado) Medidas de Fleje Permitido: 16-19 mm Esp 0.5-1.0 mm. Tension: 600-4000 N (Ajustable)',
+        images: [flejadoraPortatilAutomaticaEpac2],
+        details: [
+            { label: 'Marca', value: 'E-pac' },
+            { label: 'Modelo', value: 'DD 163' },
+            { label: 'Batería', value: 'Recargable 110V 60Hz' },
+            { label: 'Velocidad', value: '225 mm/s' },
+            { label: 'Peso', value: '3.8 Kg' },
         ],
     },
     // Consumibles
     {
-        id: 22,
+        id: 52,
         name: 'Película Estirable (Playo)',
         category: 'Consumibles',
         description: 'Película estirable para emplayar de aplicación manual. Alta resistencia y elongación. Calibre 60.',
-        images: ['/images/products/placeholder.png'],
+        images: [emplaye],
         details: [
             { label: 'Marca', value: 'Ultrex' },
             { label: 'Medidas', value: '3"x1000\', 5"x1000\', 18"x1000\'' },
@@ -712,11 +742,11 @@ export const allProducts = [
         ],
     },
     {
-        id: 23,
+        id: 53,
         name: 'Escuadra Protectora de Plástico',
         category: 'Consumibles',
         description: 'Escuadra plástica para protección de bultos a flejar. Para flejes de hasta 1" de ancho.',
-        images: ['/images/products/placeholder.png'],
+        images: [escuadra],
         details: [
             { label: 'Marca', value: 'Ultrex' },
             { label: 'Modelo', value: 'EP-1000' },
@@ -724,11 +754,11 @@ export const allProducts = [
         ],
     },
     {
-        id: 24,
+        id: 54,
         name: 'Hebilla de Plástico para Fleje',
         category: 'Consumibles',
         description: 'Hebilla de polipropileno 100% virgen para flejados livianos. Para fleje de hasta 5/8".',
-        images: ['/images/products/placeholder.png'],
+        images: [hebillaDePlastico],
         details: [
             { label: 'Marca', value: 'Ultrex' },
             { label: 'Modelo', value: 'HP-58' },
@@ -736,16 +766,30 @@ export const allProducts = [
         ],
     },
     {
-        id: 25,
+        id: 55,
         name: 'Grapas Cobrizadas para Cajas',
         category: 'Consumibles',
         description: 'Grapas cobrizadas para cerrar cajas de cartón. Cartucho con 50 grapas.',
-        images: ['/images/products/placeholder.png'],
+        images: [grapasCobrizadas],
         details: [
             { label: 'Marca', value: 'Ultrex' },
             { label: 'Modelo', value: '3315-U' },
             { label: 'Ancho de Corona', value: '34.7 mm' },
             { label: 'Largo de Pata', value: '15 mm' },
+        ],
+    },
+    {
+        id: 56,
+        name: 'Esquinero de Plástico Estándar',
+        category: 'Consumibles',
+        description: 'Fabricado en polipropileno, al igual que el esquinero de cartón optimiza sus empaques de pallets. Resiste la humedad y es ampliamente reutilizable.',
+        images: [esquineroDePlastico],
+        details: [
+            { label: 'Marca', value: 'Ultrex' },
+            { label: 'Modelo', value: 'EP-1750' },
+            { label: 'Largo de Pata', value: '1.500 "' },
+            { label: 'Espesor', value: '0.062"' },
+            { label: 'Peso', value: '0.200 Kg/Mt.' },
         ],
     },
 ].map(product => ({ ...product, slug: generateSlug(product.name) })); // Agregamos el slug a cada producto

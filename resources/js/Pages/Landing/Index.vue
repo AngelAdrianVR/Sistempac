@@ -134,29 +134,38 @@ const addElementToAnimate = (el) => {
 };
 
 onMounted(() => {
-    // Listener existentes
+    // Set initial state for the animated roll to be invisible
+    if (strappingRoll.value) {
+        strappingRoll.value.style.opacity = '0';
+    }
+
+    // Add event listeners
     window.addEventListener('scroll', handleScroll, { passive: true });
     window.addEventListener('resize', handleResize, { passive: true });
-    handleScroll();
+    
+    // Call handleScroll after a short delay to trigger the initial fade-in transition
+    setTimeout(() => {
+        handleScroll();
+    }, 100);
 
-    // Intersection Observer para animar elementos al ser visibles
+    // Intersection Observer for animating elements as they become visible
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Aplica un retardo si está definido en el elemento
+                // Apply delay if defined in the element's data attribute
                 const delay = entry.target.dataset.delay || 0;
                 setTimeout(() => {
                     entry.target.classList.add('is-visible');
                 }, parseInt(delay));
-                // Deja de observar el elemento una vez que es visible
+                // Stop observing the element once it is visible
                 observer.unobserve(entry.target);
             }
         });
     }, {
-        threshold: 0.1 // Se activa cuando el 10% del elemento es visible
+        threshold: 0.1 // Trigger when 10% of the element is visible
     });
 
-    // Observa cada elemento que se registró
+    // Observe each registered element
     elementsToAnimate.value.forEach(el => {
         if (el) observer.observe(el);
     });
@@ -171,16 +180,16 @@ onUnmounted(() => {
 <template>
     <Head title="Inicio" />
     <LandingLayout>
-        <!-- Imagen animada del rollo de fleje -->
-        <div ref="strappingRoll" class="fixed z-30" style="width: 170px; height: 170px; transition: transform 0.1s linear, top 0.1s linear, left 0.1s linear, opacity 0.1s linear;">
+        <!-- Animated strap roll image -->
+        <div ref="strappingRoll" class="fixed z-30" style="width: 170px; height: 170px; transition: transform 0.1s linear, top 0.1s linear, left 0.1s linear, opacity 1s ease-out;">
             <img src="/images/fleje_negro_landing.png" alt="Rollo de fleje animado">
         </div>
 
         <div class="relative z-20 bg-white">
-            <!-- Sección Hero -->
+            <!-- Hero Section -->
             <section id="hero" class="h-screen flex items-center">
                 <img src="/images/landing-hero.png" class="absolute top-10 left-1/2 -translate-x-1/2" alt="Herramientas de empaque y embalaje">
-                <!-- <img :ref="addElementToAnimate" src="/images/landing-hero.png" class="scroll-animate fade-in-up-soft absolute top-10 left-1/2 -translate-x-1/2 opacity-90" alt="Herramientas de empaque y embalaje"> -->
+                <!-- <img :ref="addElementToAnimate" src="/images/landing-hero.png" class="scroll-animate fade-in-up-soft absolute top-10 left-1/2 -translate-x-1/2 opacity-90" data-delay="200" alt="Herramientas de empaque y embalaje"> -->
                 <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h1 :ref="addElementToAnimate" data-delay="100" class="scroll-animate fade-in-up-soft text-4xl md:text-6xl font-extrabold text-blue-900 leading-tight mt-10">
                         Soluciones en <span class="text-yellow-500">Empaque</span><br> que Impulsan tu Negocio
@@ -191,7 +200,7 @@ onUnmounted(() => {
                 </div>
             </section>
 
-            <!-- Sección Calidad -->
+            <!-- Quality Section -->
             <section class="min-h-screen flex items-center bg-gray-50 py-20 overflow-hidden">
                 <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-start">
                     <div id="calidad" class="w-full md:w-1/2 text-left relative">
@@ -220,7 +229,7 @@ onUnmounted(() => {
                 </div>
             </section>
 
-            <!-- Sección Variedad -->
+            <!-- Variety Section -->
             <section id="variedad" class="min-h-screen flex items-center bg-white py-24">
                 <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 :ref="addElementToAnimate" class="scroll-animate fade-in-up text-3xl md:text-5xl font-bold text-blue-900">Un Catálogo para Cada Necesidad</h2>
@@ -247,7 +256,7 @@ onUnmounted(() => {
                 </div>
             </section>
             
-            <!-- Sección Soluciones -->
+            <!-- Solutions Section -->
             <section id="soluciones" class="min-h-screen flex items-center bg-gray-50 py-24 overflow-hidden">
                 <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="grid md:grid-cols-2 gap-12 items-center">
@@ -272,7 +281,7 @@ onUnmounted(() => {
                 </div>
             </section>
 
-            <!-- Sección Contacto -->
+            <!-- Contact Section -->
             <section id="contacto" class="relative bg-white py-24 sm:py-32">
                  <div class="absolute inset-0 overflow-hidden -z-10">
                     <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[600px] h-[600px] bg-blue-50 rounded-full blur-3xl"></div>
@@ -292,35 +301,34 @@ onUnmounted(() => {
 </template>
 
 <style>
-/* Asegura que el scroll sea suave para una mejor experiencia */
+/* Ensures smooth scrolling for a better user experience */
 html {
     scroll-behavior: smooth;
 }
 
-/* --- ESTILOS PARA TRANSICIONES DE TEXTO AL SCROLL --- */
+/* --- STYLES FOR TEXT TRANSITIONS ON SCROLL --- */
 
-/* Estado inicial para todos los elementos animados */
+/* Initial state for all animated elements */
 .scroll-animate {
     opacity: 0;
     transition: opacity 0.6s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
-    transition-delay: var(--delay, 0s); /* Permite usar el data-delay como variable CSS */
+    transition-delay: var(--delay, 0s); /* Allows using data-delay as a CSS variable */
 }
 
-/* Animación de "deslizar hacia arriba" estándar */
+/* Standard "slide up" animation */
 .scroll-animate.fade-in-up {
     transform: translateY(30px);
 }
 
-/* Animación de "deslizar hacia arriba" más suave para el hero */
+/* Softer "slide up" animation for the hero section */
 .scroll-animate.fade-in-up-soft {
     transform: translateY(20px);
     transition-duration: 0.9s;
 }
 
-/* Estado final cuando el elemento es visible */
+/* Final state when the element becomes visible */
 .scroll-animate.is-visible {
     opacity: 1;
     transform: translateY(0);
 }
 </style>
-
