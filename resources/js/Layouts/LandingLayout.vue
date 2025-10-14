@@ -123,9 +123,9 @@ const socialLinks = [
                            :key="link.name"
                            :href="link.href"
                            class="text-gray-600 hover:text-amber-500 transition-colors duration-300 font-medium relative"
-                           :class="{ 'text-amber-500 font-semibold': page.url.startsWith(link.href) }">
+                           :class="{ 'text-amber-500 font-semibold': route().current(link.routeName) }">
                             {{ link.name }}
-                             <span v-if="page.url.startsWith(link.href)" class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-2 h-2 bg-amber-500 rounded-full"></span>
+                             <span v-if="route().current(link.routeName)" class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-2 h-2 bg-amber-500 rounded-full"></span>
                         </Link>
                         <a href="https://www.propackgdl.com.mx/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-slate-800 hover:bg-slate-700 transition-colors duration-300">
                             Tienda
@@ -218,7 +218,7 @@ const socialLinks = [
                            :href="link.href"
                            @click="isMobileMenuOpen = false"
                            class="block px-3 py-2 rounded-md text-base font-medium"
-                           :class="page.url.startsWith(link.href) ? 'bg-amber-500 text-white' : 'text-gray-600 hover:bg-gray-100'">
+                           :class="route().current(link.routeName) ? 'bg-amber-500 text-white' : 'text-gray-600 hover:bg-gray-100'">
                             {{ link.name }}
                         </Link>
                         <a href="https://www.propackgdl.com.mx/" target="_blank" rel="noopener noreferrer" class="bg-slate-800 text-white block px-3 py-2 rounded-md text-base font-medium text-center">
