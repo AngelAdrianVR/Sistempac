@@ -88,8 +88,8 @@ const footerSections = {
             { text: 'Productos', href: route('landing.products') },
             { text: '¿Quiénes somos?', href: route('landing.whoWeAre') },
             { text: 'Contacto', href: route('landing.contact') },
-            { text: 'Tienda', href: 'https://www.propackgdl.com.mx/' },
-            { text: 'Aviso de privacidad', href: '#' },
+            // { text: 'Tienda', href: 'https://www.propackgdl.com.mx/' },
+            // { text: 'Aviso de privacidad', href: '#' },
         ]
     }
 };
@@ -113,7 +113,7 @@ const socialLinks = [
                     <!-- Logo -->
                     <div class="flex-shrink-0">
                         <Link :href="route('landing.index')" class="text-2xl font-bold">
-                            <img class="w-72 md:w-60 lg:w-96" src="/images/logo_propack.png" alt="PROPACK">
+                            <img class="w-72 md:w-60 lg:w-96" src="/images/logo_sistempac.png" alt="PROPACK">
                         </Link>
                     </div>
 
@@ -127,9 +127,9 @@ const socialLinks = [
                             {{ link.name }}
                              <span v-if="route().current(link.routeName)" class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-2 h-2 bg-amber-500 rounded-full"></span>
                         </Link>
-                        <a href="https://www.propackgdl.com.mx/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-slate-800 hover:bg-slate-700 transition-colors duration-300">
+                        <!-- <a href="https://www.propackgdl.com.mx/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-slate-800 hover:bg-slate-700 transition-colors duration-300">
                             Tienda
-                        </a>
+                        </a> -->
                     </nav>
 
                      <!-- Search Bar (Desktop) -->
@@ -221,9 +221,9 @@ const socialLinks = [
                            :class="route().current(link.routeName) ? 'bg-amber-500 text-white' : 'text-gray-600 hover:bg-gray-100'">
                             {{ link.name }}
                         </Link>
-                        <a href="https://www.propackgdl.com.mx/" target="_blank" rel="noopener noreferrer" class="bg-slate-800 text-white block px-3 py-2 rounded-md text-base font-medium text-center">
+                        <!-- <a href="https://www.propackgdl.com.mx/" target="_blank" rel="noopener noreferrer" class="bg-slate-800 text-white block px-3 py-2 rounded-md text-base font-medium text-center">
                             Tienda
-                        </a>
+                        </a> -->
                     </div>
                 </div>
             </transition>
@@ -241,7 +241,7 @@ const socialLinks = [
                     <!-- Company Info -->
                     <div class="md:col-span-2 lg:col-span-1">
                         <Link :href="route('landing.index')" class="text-2xl font-bold mb-4 block">
-                           <img class="w-48 md:w-64" src="/images/logo_propack.png" alt="PROPACK">
+                           <img class="w-48 md:w-64" src="/images/logo_sistempac.png" alt="PROPACK">
                         </Link>
                         <p class="text-sm text-gray-400">
                             Soluciones integrales en empaque y embalaje para proteger y transportar tus productos con la máxima seguridad y eficiencia.
@@ -279,7 +279,7 @@ const socialLinks = [
 
                     <!-- Social Media -->
                     <div class="relative">
-                        <h4 class="font-semibold text-white tracking-wider uppercase mb-4">Síguenos</h4>
+                        <!-- <h4 class="font-semibold text-white tracking-wider uppercase mb-4">Síguenos</h4>
                         <div class="flex space-x-4">
                             <a v-for="social in socialLinks" :key="social.name" :href="social.href" class="text-gray-400 hover:text-amber-500 transition-colors">
                                 <span class="sr-only">{{ social.name }}</span>
@@ -288,7 +288,7 @@ const socialLinks = [
                                 <svg v-if="social.icon === 'linkedin'" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd" /></svg>
                                 <svg v-if="social.icon === 'instagram'" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.345 2.525c.636-.247 1.363.416 2.427-.465C9.793 2.013 10.147 2 12.315 2zm0 1.62c-2.403 0-2.73.01-3.682.055-1.002.045-1.503.2-1.842.345a3.278 3.278 0 00-1.18.82 3.278 3.278 0 00-.82 1.18c-.145.339-.3.84-.345 1.842C3.63 8.182 3.62 8.51 3.62 10.915s.01 2.73.055 3.682c.045 1.002.2 1.503.345 1.842a3.278 3.278 0 00.82 1.18 3.278 3.278 0 001.18.82c.339.145.84.3 1.842.345 1.024.048 1.37.058 3.828.058s2.804-.01 3.828-.058c1.002-.045 1.503-.2 1.842-.345a3.278 3.278 0 001.18-.82 3.278 3.278 0 00.82-1.18c.145-.339.3-.84.345-1.842.048-1.024.058-1.37.058-3.828s-.01-2.804-.058-3.828c-.045-1.002-.2-1.503-.345-1.842a3.278 3.278 0 00-.82-1.18 3.278 3.278 0 00-1.18-.82c-.339-.145-.84-.3-1.842-.345C15.05 3.63 14.72 3.62 12.315 3.62zm0 3.115a6.185 6.185 0 100 12.37 6.185 6.185 0 000-12.37zm0 1.62a4.565 4.565 0 110 9.13 4.565 4.565 0 010-9.13z" clip-rule="evenodd" /></svg>
                             </a>
-                        </div>
+                        </div> -->
 
                         <!-- Creditos DTW -->
                         <div class="absolute -right-0 bottom-0">

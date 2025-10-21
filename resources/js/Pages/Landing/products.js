@@ -33,6 +33,7 @@ import tensionadoraYbicoP173 from '@/../../public/images/products/tensionadora-Y
 import tensionadoraYbicoP278 from '@/../../public/images/products/tensionadora-1106-p278-plastico-cromo.jpg';
 import tensionadoraTranspak1 from '@/../../public/images/products/tensionadora-1501-h21-acero-transpak.jpg';
 import tensionadoraEpacHG110R from '@/../../public/images/products/tensionadora-de-fleje-HG110R.jpg';
+import tensionadoraEpacHG210 from '@/../../public/images/products/selladora Epac HG210.png';
 
 // Selladoras
 import selladoraYbicoC3004 from '@/../../public/images/products/selladora-1111-c3004-1112-c3005.png';
@@ -133,13 +134,78 @@ export const allProducts = [
         id: 1,
         name: 'Fleje de Plástico Manual',
         category: 'Flejes y Sellos',
-        description: 'Fleje de poliéster reciclado para aplicación manual, ideal para aplicaciones generales y asegurar cargas. Disponible en varios anchos y espesores.',
-        images: [flejeNegro1, flejeNegro2, flejeNegroCajaCuadrada, flejeNegroCajaOctagonal],
-        details: [
-            { label: 'Material', value: 'Poliéster (PET) Reciclado' },
-            { label: 'Anchos Disponibles', value: '3/8", 1/2", 5/8"' },
-            { label: 'Espesores', value: '0.022", 0.026", 0.031"' },
-            { label: 'Presentaciones', value: 'Manual, Caja Cuadrada, Caja Octagonal, Automático, Jumbo' },
+        description: 'Fleje de poliéster reciclado para aplicación manual, ideal para aplicaciones generales y asegurar cargas. Disponible en Anchos de 3/8", 1/2", 5/8" y espesores de 0.022" , 0.026" y 0.031" Pesos por Rollo desde 6 .000 hasta 18 .000 Kg.',
+        models: [
+            {
+                code: 'A-Manual',
+                brand: 'Ultrex',
+                images: [flejeNegro1],
+                model: 'A Manual',
+                details: [
+                    { label: 'Centro', value: '16" x 3"' },
+                    { label: 'Caja (cm)', value: '-' },
+                ]
+            },
+            {
+                code: 'B Caja cuadrada',
+                brand: 'Ultrex',
+                images: [flejeNegroCajaCuadrada],
+                model: 'B Caja cuadrada',
+                details: [
+                    { label: 'Centro', value: '-' },
+                    { label: 'Caja (cm)', value: '35 x 35 x 20' },
+                ]
+            },
+            {
+                code: 'C Caja octagonal',
+                brand: 'Ultrex',
+                images: [flejeNegroCajaOctagonal],
+                model: 'C Caja octagonal',
+                details: [
+                    { label: 'Centro', value: '-' },
+                    { label: 'Caja (cm)', value: '-' },
+                ]
+            },
+            {
+                code: 'D Automático',
+                brand: 'Ultrex',
+                images: [flejeNegro2],
+                model: 'D Automático',
+                details: [
+                    { label: 'Centro', value: '8" x 8"' },
+                    { label: 'Caja (cm)', value: '-' },
+                ]
+            },
+            {
+                code: 'E Automático en caja',
+                brand: 'Ultrex',
+                images: [],
+                model: 'E Automático en caja',
+                details: [
+                    { label: 'Centro', value: '8" x 8"' },
+                    { label: 'Caja (cm)', value: '35 x 35 x 20 ' },
+                ]
+            },
+            {
+                code: 'H Jumbo',
+                brand: 'Ultrex',
+                images: [],
+                model: 'H Jumbo',
+                details: [
+                    { label: 'Centro', value: '16" x 6"' },
+                    { label: 'Caja (cm)', value: '35 x 35 x 20 ' },
+                ]
+            },
+            {
+                code: 'I Jumbo en caja',
+                brand: 'Ultrex',
+                images: [],
+                model: 'I Jumbo en caja',
+                details: [
+                    { label: 'Centro', value: '16" x 6"' },
+                    { label: 'Caja (cm)', value: '55 x 55 x 16' },
+                ]
+            },
         ],
     },
     {
@@ -147,25 +213,137 @@ export const allProducts = [
         name: 'Fleje de Polipropileno Virgen',
         category: 'Flejes y Sellos',
         description: 'Fleje de polipropileno 100% virgen para máquinas automáticas y semiautomáticas.',
-        images: [flejeVirgen],
-        details: [
-            { label: 'Material', value: 'Polipropileno 100% Virgen' },
-            { label: 'Modelo FVA-38', value: 'Ancho 3/8", Resistencia 90 Kg, 2700 Mts/Rollo' },
-            { label: 'Modelo FVA-12', value: 'Ancho 1/2", Resistencia 130 Kg, 2000 Mts/Rollo' },
-            { label: 'Peso por Rollo', value: '10.0 Kg' },
+        models: [
+            {
+                code: '440',
+                brand: 'Ultrex',
+                images: [flejeVirgen],
+                model: 'FVA-38',
+                details: [
+                    { label: 'Ancho', value: '3/8"' },
+                    { label: 'Resistencia', value: '90 Kg' },
+                    { label: 'Espesor', value: '0.023"' },
+                    { label: 'Metros/Rollo', value: '2,700' },
+                    { label: 'Peso/Rollo', value: '10.0 Kg' }
+                ]
+            },
+            {
+                code: '449',
+                brand: 'Ultrex',
+                images: [flejeVirgen],
+                model: 'FVA-12',
+                details: [
+                    { label: 'Ancho', value: '1/2"' },
+                    { label: 'Resistencia', value: '130 Kg' },
+                    { label: 'Espesor', value: '0.023"' },
+                    { label: 'Metros/Rollo', value: '2,000' },
+                    { label: 'Peso/Rollo', value: '10.0 Kg' }
+                ]
+            }
         ],
     },
     {
         id: 3,
         name: 'Sellos Metálicos para Fleje de Plástico',
         category: 'Flejes y Sellos',
-        description: 'Sello abierto galvanizado para fleje de plástico, disponible en varias medidas y presentaciones.',
-        images: [selloFleje1, selloFleje2],
-        details: [
-            { label: 'Material', value: 'Galvanizado' },
-            { label: 'Anchos', value: '3/8", 1/2", 5/8", 3/4"' },
-            { label: 'Modelos', value: 'SPS-38AC, SPS-28AC, SPS-58AC, SPS-34AC' },
-            { label: 'Empaque', value: 'Caja con 1000 pzas o Saco con 5000 pzas' },
+        description: 'Sello abierto galvanizado para fleje de plástico, disponible en varias medidas y presentaciones. Longitud: 1.250" Espesor: Cal. 26 (0.018"). Tarima: 210 Cajas/C1,000 Pzas. 42 Sacos c/5,000 Pzas',
+        models: [
+            {
+                code: '1005',
+                brand: 'Ultrex',
+                images: [selloFleje1],
+                model: 'SPS-38AC',
+                details: [
+                    { label: 'Ancho', value: '3/8"' },
+                    { label: 'Empaque', value: 'Caja 1,000' },
+                    { label: 'Peso/Millar', value: '3.300 Kg' },
+                    { label: 'Peso/tarima', value: '693.0 Kg' },
+                ]
+            },
+            {
+                code: '1006',
+                brand: 'Ultrex',
+                images: [selloFleje2],
+                model: 'SPS-28AC',
+                details: [
+                    { label: 'Ancho', value: '1/2"' },
+                    { label: 'Empaque', value: 'Caja 1,000' },
+                    { label: 'Peso/Millar', value: '2.700 Kg' },
+                    { label: 'Peso/tarima', value: '567.0 Kg' },
+                ]
+            },
+            {
+                code: '1007',
+                brand: 'Ultrex',
+                images: [selloFleje1],
+                model: 'SPS-58AC',
+                details: [
+                    { label: 'Ancho', value: '5/8"' },
+                    { label: 'Empaque', value: 'Caja 1,000' },
+                    { label: 'Peso/Millar', value: '3.800 Kg' },
+                    { label: 'Peso/tarima', value: '798.0 Kg' },
+                ]
+            },
+            {
+                code: '1008',
+                brand: 'Ultrex',
+                images: [selloFleje1],
+                model: 'SPS-34AC',
+                details: [
+                    { label: 'Ancho', value: '3/4"' },
+                    { label: 'Empaque', value: 'Caja 1,000' },
+                    { label: 'Peso/Millar', value: '4.100 Kg' },
+                    { label: 'Peso/tarima', value: '861.0 Kg' },
+                ]
+            },
+            {
+                code: '1017',
+                brand: 'Ultrex',
+                images: [selloFleje2],
+                model: 'SPS-38AS',
+                details: [
+                    { label: 'Ancho', value: '3/8"' },
+                    { label: 'Empaque', value: 'Saco 5,000' },
+                    { label: 'Peso/Millar', value: '2.700 Kg' },
+                    { label: 'Peso/tarima', value: '567.0  Kg' },
+                ]
+            },
+            {
+                code: '1018',
+                brand: 'Ultrex',
+                images: [selloFleje1],
+                model: 'SPS-28AS',
+                details: [
+                    { label: 'Ancho', value: '1/2"' },
+                    { label: 'Empaque', value: 'Saco 5,000' },
+                    { label: 'Peso/Millar', value: '3.300 Kg' },
+                    { label: 'Peso/tarima', value: '693.0 Kg' },
+                ]
+            },
+            {
+                code: '1019',
+                brand: 'Ultrex',
+                images: [selloFleje1],
+                model: 'SPS-58AS',
+                details: [
+                    { label: 'Ancho', value: '5/8"' },
+                    { label: 'Empaque', value: 'Saco 5,000' },
+                    { label: 'Peso/Millar', value: '3.800 Kg' },
+                    { label: 'Peso/tarima', value: '798.0 Kg' },
+                ]
+            },
+            {
+                code: '1020',
+                brand: 'Ultrex',
+                images: [selloFleje2],
+                model: 'SPS-34AS',
+                details: [
+                    { label: 'Ancho', value: '3/4"' },
+                    { label: 'Empaque', value: 'Saco 5,000' },
+                    { label: 'Peso/Millar', value: '4.100 Kg' },
+                    { label: 'Peso/tarima', value: '861.0 Kg' },
+                ]
+            },
         ],
     },
     {
@@ -173,11 +351,25 @@ export const allProducts = [
         name: 'Sellos para Fleje de Poliéster Dentado',
         category: 'Flejes y Sellos',
         description: 'Sellos con interior especialmente diseñado para un mejor agarre en fleje de poliéster.',
-        images: [selloFlejeDentado],
-        details: [
-            { label: 'Modelo SPF-12', value: 'Ancho 1/2", Calibre 22' },
-            { label: 'Modelo SPF-58', value: 'Ancho 5/8", Calibre 20' },
-            { label: 'Empaque', value: 'Costal con 2 millares' },
+        models: [
+            {
+                code: '1051',
+                brand: 'Ultrex',
+                images: [selloFlejeDentado],
+                model: 'SPF-12',
+                details: [
+                    { label: 'Ancho/Calibre', value: '1/2" Cal. 22' },
+                ]
+            },
+            {
+                code: '1052',
+                brand: 'Ultrex',
+                images: [selloFlejeDentado],
+                model: 'SPF-58',
+                details: [
+                    { label: 'Ancho/Calibre', value: '5/8" Cal 20' },
+                ]
+            },
         ],
     },
     // Equipos para Flejar
@@ -185,22 +377,41 @@ export const allProducts = [
         id: 5,
         name: 'Tensionadora Ybico P-262',
         category: 'Equipos para Flejar',
-        description: 'Tensionadora de uso rudo con cuerpo de fundición y bujes de acero. Para fleje de plástico de hasta 3/4".',
-        images: [tensionadoraYbicoP262],
-        details: [
-            { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'P-262' },
-            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '1.200 Kg' }, {label: 'Longitud', value: '245 mm'}
+        description: 'Tensionadora uso rudo, Cuerpo de fundición C/bujes de bronce (1101) o Bujes de Acero (1105), pelubricados entre la base y Enrollador. Para fleje de medidas hasta 3/4"',
+        models: [
+            {
+                code: '1105',
+                brand: 'Ybico',
+                images: [tensionadoraYbicoP262],
+                model: 'P-262',
+                details: [
+                    { label: 'Hecho en', value: 'Taiwán' },
+                    { label: 'Piezas/Caja', value: '20' },
+                    { label: 'Longitud', value: '245 mm' },
+                    { label: 'Peso', value: '1.200 Kg' },
+                ]
+            },
         ],
     },
     {
         id: 6,
         name: 'Tensionadora Ybico P-472',
         category: 'Equipos para Flejar',
+        url: 'https://www.youtube.com/watch?v=mf--uhU3cjI',
         description: 'Tensionadora de Aluminio Gigante para uso rudo,de fundición bujes autolubricados entre la base y el Enrollador. Para fleje demedidas hasta 3/4" a 1-1/2"',
-        images: [tensionadoraYbicoP472],
-        details: [
-            { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'P-472' },
-            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '2.300 Kg' }, {label: 'Longitud', value: '340 mm'}
+        models: [
+            {
+                code: '1103',
+                brand: 'Ybico',
+                images: [tensionadoraYbicoP472],
+                model: 'P-472',
+                details: [
+                    { label: 'Hecho en', value: 'Taiwán' },
+                    { label: 'Piezas/Caja', value: '6' },
+                    { label: 'Longitud', value: '340 mm' },
+                    { label: 'Peso', value: '2.300 Kg' },
+                ]
+            },
         ],
     },
     {
@@ -208,10 +419,20 @@ export const allProducts = [
         name: 'Tensionadora Ybico P-117',
         category: 'Equipos para Flejar',
         description: 'Tensionadora para uso rudo, Cuerpo de metal de fundición con bujes de latón entre la base y el Enrollador. Para fleje demedidas hasta 3/4"',
-        images: [tensionadoraYbicoP117],
-        details: [
-            { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'P-472' },
-            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '2.200 Kg' }, {label: 'Longitud', value: '300 mm'}
+        url: 'https://www.youtube.com/watch?v=fxOI9Eg1ivg',
+        models: [
+            {
+                code: '1104',
+                brand: 'Ybico',
+                images: [tensionadoraYbicoP117],
+                model: 'P-117',
+                details: [
+                    { label: 'Hecho en', value: 'Taiwán' },
+                    { label: 'Piezas/Caja', value: '20' },
+                    { label: 'Longitud', value: '300 mm' },
+                    { label: 'Peso', value: '2.200 Kg' },
+                ]
+            },
         ],
     },
     {
@@ -219,65 +440,162 @@ export const allProducts = [
         name: 'Tensionadora Ybico P-278',
         category: 'Equipos para Flejar',
         description: 'Tensionadora de Uso Rudo Con Nariz Para Fleje de PET y Nylon.Ancho de Fleje Permitido 1". Ideal Para Superficies o Paquetes Irregulares',
-        images: [tensionadoraYbicoP278],
-        details: [
-            { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'P-472' },
-            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '1.500 Kg' }
+        url: 'https://www.youtube.com/watch?v=TQIggjSp3ag',
+        models: [
+            {
+                code: '1106',
+                brand: 'Ybico',
+                images: [tensionadoraYbicoP278],
+                model: 'P-278',
+                details: [
+                    { label: 'Hecho en', value: 'Taiwán' },
+                    { label: 'Piezas/Caja', value: '12' },
+                    { label: 'Longitud', value: '-' },
+                    { label: 'Peso', value: '1.500 Kg' },
+                ]
+            },
         ],
     },
     {
         id: 9,
-        name: 'Tensionadora Ybico P-173',
+        name: 'Tensionadora Transpak H-21',
         category: 'Equipos para Flejar',
-        description: 'Restirador y cortador manual para usarse con la hebilla de plástico.',
-        images: [tensionadoraYbicoP173],
-        details: [
-            { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'P-472' },
-            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '0.100 Kg' }
+        description: 'Tensionadora para uso rudo, cuerpo de metal de fundición. Para fleje de plástico de hasta 3/4".',
+        models: [
+            {
+                code: '1501',
+                brand: 'Transpak',
+                images: [tensionadoraTranspak1],
+                model: 'H-21',
+                details: [
+                    { label: 'Hecho en', value: 'Taiwán' },
+                    { label: 'Piezas/Caja', value: '20' },
+                    { label: 'Longitud', value: '300 mm' },
+                    { label: 'Peso', value: '2.200 Kg' },
+                ]
+            },
         ],
     },
     {
         id: 10,
-        name: 'Tensionadora Transpak H-21',
+        name: 'Tensionadora Epac HG110R/HG110L',
         category: 'Equipos para Flejar',
-        description: 'Tensionadora para uso rudo, cuerpo de metal de fundición. Para fleje de plástico de hasta 3/4".',
-        images: [tensionadoraTranspak1],
-        details: [
-            { label: 'Marca', value: 'Transpak' }, { label: 'Modelo', value: 'H-21' },
-            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '2.200 Kg' },
+        description: 'Tensionadora para uso Pesado (16010) o Liviano (16011), Cuerpo de metal de fundición. Para fleje de medidas hasta 3/4"',
+        images: [tensionadoraEpacHG110R],
+        models: [
+            {
+                code: '16010',
+                brand: 'Epac',
+                images: [tensionadoraEpacHG110R],
+                model: 'HG110R',
+                details: [
+                    { label: 'Hecho en', value: 'China' },
+                    { label: 'Piezas/Caja', value: '10' },
+                    { label: 'Longitud', value: '300 mm' },
+                    { label: 'Peso', value: '2.200 Kg' },
+                ]
+            },
+            {
+                code: '16011',
+                brand: 'Epac',
+                images: [tensionadoraEpacHG110R],
+                model: 'HG110L',
+                details: [
+                    { label: 'Hecho en', value: 'China' },
+                    { label: 'Piezas/Caja', value: '20' },
+                    { label: 'Longitud', value: '300 mm' },
+                    { label: 'Peso', value: '2.200 Kg' },
+                ]
+            },
         ],
     },
     {
         id: 11,
-        name: 'Tensionadora Epac HG110R',
+        name: 'Tensionadora Ybico P-173',
         category: 'Equipos para Flejar',
-        description: 'Tensionadora para uso Pesado (16010) o Liviano (16011), Cuerpo de metal de fundición. Para fleje de medidas hasta 3/4"',
-        images: [tensionadoraEpacHG110R],
-        details: [
-            { label: 'Marca', value: 'Epac' }, { label: 'Modelo', value: 'HG110R' },
-            { label: 'Origen', value: 'China' }, { label: 'Peso', value: '2.200 Kg' }, {label: 'Longitud', value: '300 mm'}
+        description: 'Restirador y cortador manual para usarse con la hebilla de plástico.',
+        url: 'https://www.youtube.com/watch?v=kalahBBC5Eg',
+        models: [
+            {
+                code: '1110',
+                brand: 'Ybico',
+                images: [tensionadoraYbicoP173],
+                model: 'P-173',
+                details: [
+                    { label: 'Hecho en', value: 'Taiwán' },
+                    { label: 'Piezas/Caja', value: '12' },
+                    { label: 'Longitud', value: '91 mm' },
+                    { label: 'Peso', value: '0.100 Kg' },
+                ]
+            },
         ],
     },
+    
+    
     {
         id: 12,
         name: 'Selladora Ybico C-3004 / C-3005',
         category: 'Equipos para Flejar',
-        description: 'Selladora cromada con mordazas de acero y forros de PVC. Para sellos de 1/2" (C-3004) y 5/8" (C-3005).',
-        images: [selladoraYbicoC3004],
-        details: [
-            { label: 'Marca', value: 'Ybico' }, { label: 'Modelos', value: 'C-3004, C-3005' }, 
-            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '1.650 Kg' }, {label: 'Longitud', value: '400 mm'}
+        description: 'Selladora cromada con mordazas de acero, (forros de PVC) 1111 C-3004 Para sellos de hasta 1/2", 1112 C-3005 Para sellos de hasta 5/8"',
+        url: 'https://www.youtube.com/watch?v=f69c00RRxkQ',
+        models: [
+            {
+                code: '1111',
+                brand: 'Ybico',
+                images: [selladoraYbicoC3004],
+                model: 'C-3004',
+                details: [
+                    { label: 'Hecho en', value: 'Taiwán' },
+                    { label: 'Piezas/Caja', value: '20' },
+                    { label: 'Longitud', value: '400 mm' },
+                    { label: 'Peso', value: '1.650 Kg' },
+                ]
+            },
+            {
+                code: '1112',
+                brand: 'Ybico',
+                images: [selladoraYbicoC3004],
+                model: 'C-3005',
+                details: [
+                    { label: 'Hecho en', value: 'China' },
+                    { label: 'Piezas/Caja', value: '20' },
+                    { label: 'Longitud', value: '400 mm' },
+                    { label: 'Peso', value: '1.650 Kg' },
+                ]
+            },
         ],
     },
     {
         id: 13,
         name: 'Selladora Ybico C-5004 / C-5005',
         category: 'Equipos para Flejar',
-        description: 'Selladora cromada con mordazas de acero y forros de PVC. Para sellos de 1/2" (C-3004) y 5/8" (C-3005).',
-        images: [selladoraYbicoC5004],
-        details: [
-            { label: 'Marca', value: 'Ybico' }, { label: 'Modelos', value: 'C-3004, C-3005' },
-            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '2.000 Kg' }, {label: 'Longitud', value: '510 mm'},
+        description: 'Selladora reforzada cromada con mordazas de acero, para fleje de poliéster (forros de PVC) 1113 C-5004 Para sellos de hasta 1/2",1114 C-5005 Para sellos de hasta 5/8"',
+        url: 'https://www.youtube.com/watch?v=lnmz-Gg6R6U',
+        models: [
+            {
+                code: '1113',
+                brand: 'Ybico',
+                images: [selladoraYbicoC5004],
+                model: 'C-5004',
+                details: [
+                    { label: 'Hecho en', value: 'Taiwán' },
+                    { label: 'Piezas/Caja', value: '20' },
+                    { label: 'Longitud', value: '510 mm' },
+                    { label: 'Peso', value: '2.000 Kg' },
+                ]
+            },
+            {
+                code: '1114',
+                brand: 'Ybico',
+                images: [selladoraYbicoC5004],
+                model: 'C-5005',
+                details: [
+                    { label: 'Hecho en', value: 'Taiwán' },
+                    { label: 'Piezas/Caja', value: '20' },
+                    { label: 'Longitud', value: '510 mm' },
+                    { label: 'Peso', value: '2.000 Kg' },
+                ]
+            },
         ],
     },
     {
@@ -285,511 +603,540 @@ export const allProducts = [
         name: 'Selladora Transpak H-35',
         category: 'Equipos para Flejar',
         description: 'Selladora cromada con 3 mordazas de acero y Mango de 390 mm de Longitud, para sellos de 1/2".',
-        images: [selladoraTranspakH35],
-        details: [
-            { label: 'Marca', value: 'Transpak' }, { label: 'Modelos', value: 'H-35' },
-            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '1.500 Kg' }, {label: 'Longitud', value: '390 mm'},
+        models: [
+            {
+                code: '1511',
+                brand: 'Transpak',
+                images: [selladoraTranspakH35],
+                model: 'H-35',
+                details: [
+                    { label: 'Hecho en', value: 'Taiwán' },
+                    { label: 'Longitud', value: '390 mm' },
+                    { label: 'Peso', value: '1.500 Kg' },
+                ]
+            },
         ],
     },
     {
         id: 15,
-        name: 'Tensionadora para Fleje de Acero Ybico S-290',
+        name: 'Selladora Epac HG210',
         category: 'Equipos para Flejar',
-        description: 'Tensionadora para uso normal en fleje de acero. Permite anchos desde 3/8" hasta 3/4" y espesor de 0.035".',
-        images: [tensionadoraYbicoS290],
-        details: [
-            { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'S-290' },
-            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '2.000 Kg' }, {label: 'Longitud', value: '365 mm'}
+        description: 'Selladora cromada con 3 mordazas de acero y Mango de 500 mm de Longitud, para sellos de 1/2"',
+        url: 'http://www.youtube.com/watch?v=m-JwQq8hHHs',
+        models: [
+            {
+                code: '16110',
+                brand: 'Epac',
+                images: [tensionadoraEpacHG210],
+                model: 'HG210',
+                details: [
+                    { label: 'Hecho en', value: 'China' },
+                    { label: 'Piezas/Caja', value: '10' },
+                    { label: 'Longitud', value: '500 mm' },
+                    { label: 'Peso', value: '1.840 Kg' },
+                ]
+            },
         ],
     },
-    {
-        id: 16,
-        name: 'Tensionadora para Fleje de Acero Ybico S-298',
-        category: 'Equipos para Flejar',
-        description: 'Tensionadora para uso rudo. Permite flejar anchos desde 3/4" hasta 1-1/4" y espesor de 0.035"',
-        images: [tensionadoraYbicoS298],
-        details: [
-            { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'S-298' },
-            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '3.500 Kg' }, {label: 'Longitud', value: '480 mm'}
-        ],
-    },
-    {
-        id: 17,
-        name: 'Tensionadora para Fleje de Acero Ybico S-210',
-        category: 'Equipos para Flejar',
-        description: 'Tensionadora de cremallera para empaques redondos o irregulares. Permite flejar anchos de fleje desde 3/8" hasta 3/4" y espesor de 0.020"',
-        images: [tensionadoraYbicoS210],
-        details: [
-            { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'S-210' },
-            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '1.500 Kg' }, {label: 'Longitud', value: '250 mm'}
-        ],
-    },
-    {
-        id: 18,
-        name: 'Tensionadora para Fleje de Acero Ybico S-220',
-        category: 'Equipos para Flejar',
-        description: 'Tensionadora de cremallera. Permite flejar anchos de fleje desde 3/8" hasta 3/4" y espesor máximo de 0.030"',
-        images: [tensionadoraYbicoS220],
-        details: [
-            { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'S-220' },
-            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '2.100 Kg' }, {label: 'Longitud', value: '350 mm'}
-        ],
-    },
-    {
-        id: 19,
-        name: 'Tensionadora para Fleje de Acero Ybico S-225',
-        category: 'Equipos para Flejar',
-        description: 'Tensionadora de cremallera. Permite flejar anchos de fleje desde 3/8" hasta 3/4" y espesor máximo de 0.030"',
-        images: [tensionadoraYbicoS225],
-        details: [
-            { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'S-225' },
-            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '2.100 Kg' }, {label: 'Longitud', value: '350 mm'}
-        ],
-    },
-    {
-        id: 20,
-        name: 'Tensionadora para Fleje de Acero Ybico S-260',
-        category: 'Equipos para Flejar',
-        description: 'Tensionadora forjada con cortador para fleje de acero inoxidable. Permite flejar anchos de fleje desde 3/8" hasta 3/4" y espesor máximo de 0.030"',
-        images: [tensionadoraYbicoS260],
-        details: [
-            { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'S-225' },
-            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '1.700 Kg' }, {label: 'Longitud', value: '280 mm'}
-        ],
-    },
-    {
-        id: 21,
-        name: 'Tensionadora para Fleje de Acero Ybico S-262 / HG-S1',
-        category: 'Equipos para Flejar',
-        description: 'Tensionadora forjada con cortador para fleje de acero inoxidable. Tipo BAND-IT permite flejar anchos de fleje desde 3/8" hasta 3/4" y espesor máximo de 0.030" (Todas las partes templadas)',
-        images: [tensionadoraYbicoS262],
-        details: [
-            { label: 'Marca', value: 'Ybico/E-pac' }, { label: 'Modelo', value: 'S-225' },
-            { label: 'Origen', value: 'Taiwán/China' }, { label: 'Peso', value: '1.700 Kg' }, {label: 'Longitud', value: '280 mm'}
-        ],
-    },
-    {
-        id: 22,
-        name: 'Tensionadora para Fleje de Acero Ybico S-283',
-        category: 'Equipos para Flejar',
-        description: 'Tensionadora forjada con cortador para fleje de acero inoxidable. Tipo BAND-IT permite flejar anchos de fleje desde 3/8" hasta 3/4" y espesor máximo de 0.030" (Todas las partes templadas)',
-        images: [tensionadoraYbicoS283],
-        details: [
-            { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'S-283' },
-            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '0.320 Kg' }, {label: 'Longitud', value: '220 mm'}
-        ],
-    },
-    {
-        id: 23,
-        name: 'Tensionadora para Fleje de Acero Ybico S-240',
-        category: 'Equipos para Flejar',
-        description: 'Tensionadora Para Fleje de Acero Inoxidable con Cortador y Martillo para superficies irregulares. Para Flejes de 3/8" a 3/4" y espesor Máximo de 0.030"',
-        images: [tensionadoraYbicoS240],
-        details: [
-            { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'S-240' },
-            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '1.450 Kg' }
-        ],
-    },
-    {
-        id: 24,
-        name: 'Tensionadora para Fleje de Acero Ybico S-244',
-        category: 'Equipos para Flejar',
-        description: 'Tensionadora Para Fleje de Acero Inoxidable con Cortador para superficies irregulares. Para Flejes de 3/8" a 3/4" y espesor Máximo de 0.030"',
-        images: [tensionadoraYbicoS244],
-        details: [
-            { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'S-244' },
-            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '1.450 Kg' }
-        ],
-    },
-    {
-        id: 25,
-        name: 'Cortadora para Fleje de Acero Ybico H-201',
-        category: 'Equipos para Flejar',
-        description: 'Cortador para fleje de acero. Fabricado en acero forjado. Permite cortar flejes con anchos desde 3/8" hasta 1-1/4" en un espesor de 0.031"',
-        images: [cortadorYbicoH201],
-        details: [
-            { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'H-201' },
-            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '0.800 Kg' }, {label: 'Longitud', value: '320 mm'}
-        ],
-    },
-    {
-        id: 26,
-        name: 'Cortadora para Fleje de Acero Ybico H-305/HGC002',
-        category: 'Equipos para Flejar',
-        description: 'Cortador para fleje de acero. Fabricado en acero forjado para uso rudo. Acondicionado para cortar flejes con anchos de hasta 2" en un espesor de 0.050"',
-        images: [cortadorYbicoH305, cortadorYbicoHGC002],
-        details: [
-            { label: 'Marca', value: 'Ybico/E-pac' }, { label: 'Modelo', value: 'H-305/HGC002' },
-            { label: 'Origen', value: 'Taiwán/China' }, { label: 'Peso', value: '2.800 Kg' }, {label: 'Longitud', value: '660 mm'}
-        ],
-    },
-    {
-        id: 27,
-        name: 'Cortadora para Fleje de Acero Ybico H-410',
-        category: 'Equipos para Flejar',
-        description: 'Cortador para fleje de acero. Fabricado en acero forjado para uso rudo. Acondicionado para cortar flejes con anchos de hasta 2" en un espesor de 0.050". Con Navaja Reversible',
-        images: [cortadorYbicoH410],
-        details: [
-            { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'H-410' },
-            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '2.900 Kg' }, {label: 'Longitud', value: '650 mm'}
-        ],
-    },
-    {
-        id: 28,
-        name: 'Selladora para Fleje de Acero Ybico',
-        category: 'Equipos para Flejar',
-        description: 'Selladora con doble mordaza de acero templado. 4 medidas para cada ancho de fleje, 3/8", 1/2", 5/8" y 3/4" y espesor de 0.025"',
-        images: [selladoraYbicoC3103],
-        details: [
-            { label: 'Marca', value: 'Ybico/Epac' }, { label: 'Modelos Ybico', value: 'C-3103, C-3104, C-3105, C-3106' }, { label: 'Modelos Epac', value: 'HGB811-12, HGB811-58' },
-            { label: 'Origen', value: 'Taiwán/China' }, { label: 'Peso', value: '0.900 Kg' }, {label: 'Longitud', value: '340 mm'}
-        ],
-    },
-    {
-        id: 29,
-        name: 'Selladora para Fleje de Acero Ybico',
-        category: 'Equipos para Flejar',
-        description: 'Selladora maneral largo con doble mordaza de acero templado. 4 medidas para cada ancho de fleje, 3/8", 1/2", 5/8" y 3/4" y espesor de 0.025"',
-        images: [selladoraYbicoC3203],
-        details: [
-            { label: 'Marca', value: 'Ybico' }, { label: 'Modelos', value: 'C-3203, C-3204, C-3205, C-3206' },
-            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '0.900 Kg' }, {label: 'Longitud', value: '350 mm'}
-        ],
-    },
-    {
-        id: 30,
-        name: 'Selladora para Fleje de Acero Ybico C-3180',
-        category: 'Equipos para Flejar',
-        description: 'Selladora para uso rudo con doble mordaza de acero tratado. Permite anchos de fleje de 1-1/4" y espesor de 0.035" Sellado lateral',
-        images: [selladoraYbicoC3180],
-        details: [
-            { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'C-3180' },
-            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '2.900 Kg' }, {label: 'Longitud', value: '730 mm'}
-        ],
-    },
-    {
-        id: 31,
-        name: 'Selladora para Fleje de Acero Ybico C-3160',
-        category: 'Equipos para Flejar',
-        description: 'Selladora para uso rudo con doble mordaza de acero tratado. Permite anchos de fleje de 3/4" y espesor de 0.035" Sellado lateral',
-        images: [selladoraYbicoC3160],
-        details: [
-            { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'C-3160' },
-            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '2.400 Kg' }, {label: 'Longitud', value: '660 mm'}
-        ],
-    },
-    {
-        id: 32,
-        name: 'Flejadora de Combinación para Acero Ybico SL 200',
-        category: 'Equipos para Flejar',
-        description: 'No necesita sello. Para fleje de acero de 1/2", 5/8" y 3/4" con espesores de 0.017" a 0.035".',
-        images: [flejadoraCombinadaYbicoP1604, flejadoraCombinadaYbicoSL200],
-        details: [
-            { label: 'Marca', value: 'Ybico' }, { label: 'Modelos', value: 'P-1604, SL 200' },
-            { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '3.500 Kg' },
-        ],
-    },
-    {
-        id: 33,
-        name: 'Portarrollo Importado',
-        category: 'Equipos para Flejar',
-        description: 'Portarrollo para fleje de plástico o acero, con mecanismo de freno, disco de metal y bandeja.',
-        images: [portarollosImportados1, portarollosImportados2],
-        details: [
-            { label: 'Modelo', value: 'PRI-1 (Negro), PRI-2 (Azul/Amarillo)' },
-            { label: 'Capacidad', value: '60 Kg.' }, { label: 'Peso', value: '16.0 Kg' },
-            { label: 'Centros', value: '8" y 16" de diámetro' },
-        ],
-    },
+    // {
+    //     id: 16,
+    //     name: 'Tensionadora para Fleje de Acero Ybico S-290',
+    //     category: 'Equipos para Flejar',
+    //     description: 'Tensionadora para uso normal en fleje de acero. Permite anchos desde 3/8" hasta 3/4" y espesor de 0.035".',
+    //     images: [tensionadoraYbicoS290],
+    //     details: [
+    //         { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'S-290' },
+    //         { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '2.000 Kg' }, {label: 'Longitud', value: '365 mm'}
+    //     ],
+    // },
+    // {
+    //     id: 16,
+    //     name: 'Tensionadora para Fleje de Acero Ybico S-298',
+    //     category: 'Equipos para Flejar',
+    //     description: 'Tensionadora para uso rudo. Permite flejar anchos desde 3/4" hasta 1-1/4" y espesor de 0.035"',
+    //     images: [tensionadoraYbicoS298],
+    //     details: [
+    //         { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'S-298' },
+    //         { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '3.500 Kg' }, {label: 'Longitud', value: '480 mm'}
+    //     ],
+    // },
+    // {
+    //     id: 17,
+    //     name: 'Tensionadora para Fleje de Acero Ybico S-210',
+    //     category: 'Equipos para Flejar',
+    //     description: 'Tensionadora de cremallera para empaques redondos o irregulares. Permite flejar anchos de fleje desde 3/8" hasta 3/4" y espesor de 0.020"',
+    //     images: [tensionadoraYbicoS210],
+    //     details: [
+    //         { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'S-210' },
+    //         { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '1.500 Kg' }, {label: 'Longitud', value: '250 mm'}
+    //     ],
+    // },
+    // {
+    //     id: 18,
+    //     name: 'Tensionadora para Fleje de Acero Ybico S-220',
+    //     category: 'Equipos para Flejar',
+    //     description: 'Tensionadora de cremallera. Permite flejar anchos de fleje desde 3/8" hasta 3/4" y espesor máximo de 0.030"',
+    //     images: [tensionadoraYbicoS220],
+    //     details: [
+    //         { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'S-220' },
+    //         { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '2.100 Kg' }, {label: 'Longitud', value: '350 mm'}
+    //     ],
+    // },
+    // {
+    //     id: 19,
+    //     name: 'Tensionadora para Fleje de Acero Ybico S-225',
+    //     category: 'Equipos para Flejar',
+    //     description: 'Tensionadora de cremallera. Permite flejar anchos de fleje desde 3/8" hasta 3/4" y espesor máximo de 0.030"',
+    //     images: [tensionadoraYbicoS225],
+    //     details: [
+    //         { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'S-225' },
+    //         { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '2.100 Kg' }, {label: 'Longitud', value: '350 mm'}
+    //     ],
+    // },
+    // {
+    //     id: 20,
+    //     name: 'Tensionadora para Fleje de Acero Ybico S-260',
+    //     category: 'Equipos para Flejar',
+    //     description: 'Tensionadora forjada con cortador para fleje de acero inoxidable. Permite flejar anchos de fleje desde 3/8" hasta 3/4" y espesor máximo de 0.030"',
+    //     images: [tensionadoraYbicoS260],
+    //     details: [
+    //         { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'S-225' },
+    //         { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '1.700 Kg' }, {label: 'Longitud', value: '280 mm'}
+    //     ],
+    // },
+    // {
+    //     id: 21,
+    //     name: 'Tensionadora para Fleje de Acero Ybico S-262 / HG-S1',
+    //     category: 'Equipos para Flejar',
+    //     description: 'Tensionadora forjada con cortador para fleje de acero inoxidable. Tipo BAND-IT permite flejar anchos de fleje desde 3/8" hasta 3/4" y espesor máximo de 0.030" (Todas las partes templadas)',
+    //     images: [tensionadoraYbicoS262],
+    //     details: [
+    //         { label: 'Marca', value: 'Ybico/E-pac' }, { label: 'Modelo', value: 'S-225' },
+    //         { label: 'Origen', value: 'Taiwán/China' }, { label: 'Peso', value: '1.700 Kg' }, {label: 'Longitud', value: '280 mm'}
+    //     ],
+    // },
+    // {
+    //     id: 22,
+    //     name: 'Tensionadora para Fleje de Acero Ybico S-283',
+    //     category: 'Equipos para Flejar',
+    //     description: 'Tensionadora forjada con cortador para fleje de acero inoxidable. Tipo BAND-IT permite flejar anchos de fleje desde 3/8" hasta 3/4" y espesor máximo de 0.030" (Todas las partes templadas)',
+    //     images: [tensionadoraYbicoS283],
+    //     details: [
+    //         { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'S-283' },
+    //         { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '0.320 Kg' }, {label: 'Longitud', value: '220 mm'}
+    //     ],
+    // },
+    // {
+    //     id: 23,
+    //     name: 'Tensionadora para Fleje de Acero Ybico S-240',
+    //     category: 'Equipos para Flejar',
+    //     description: 'Tensionadora Para Fleje de Acero Inoxidable con Cortador y Martillo para superficies irregulares. Para Flejes de 3/8" a 3/4" y espesor Máximo de 0.030"',
+    //     images: [tensionadoraYbicoS240],
+    //     details: [
+    //         { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'S-240' },
+    //         { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '1.450 Kg' }
+    //     ],
+    // },
+    // {
+    //     id: 24,
+    //     name: 'Tensionadora para Fleje de Acero Ybico S-244',
+    //     category: 'Equipos para Flejar',
+    //     description: 'Tensionadora Para Fleje de Acero Inoxidable con Cortador para superficies irregulares. Para Flejes de 3/8" a 3/4" y espesor Máximo de 0.030"',
+    //     images: [tensionadoraYbicoS244],
+    //     details: [
+    //         { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'S-244' },
+    //         { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '1.450 Kg' }
+    //     ],
+    // },
+    // {
+    //     id: 25,
+    //     name: 'Cortadora para Fleje de Acero Ybico H-201',
+    //     category: 'Equipos para Flejar',
+    //     description: 'Cortador para fleje de acero. Fabricado en acero forjado. Permite cortar flejes con anchos desde 3/8" hasta 1-1/4" en un espesor de 0.031"',
+    //     images: [cortadorYbicoH201],
+    //     details: [
+    //         { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'H-201' },
+    //         { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '0.800 Kg' }, {label: 'Longitud', value: '320 mm'}
+    //     ],
+    // },
+    // {
+    //     id: 26,
+    //     name: 'Cortadora para Fleje de Acero Ybico H-305/HGC002',
+    //     category: 'Equipos para Flejar',
+    //     description: 'Cortador para fleje de acero. Fabricado en acero forjado para uso rudo. Acondicionado para cortar flejes con anchos de hasta 2" en un espesor de 0.050"',
+    //     images: [cortadorYbicoH305, cortadorYbicoHGC002],
+    //     details: [
+    //         { label: 'Marca', value: 'Ybico/E-pac' }, { label: 'Modelo', value: 'H-305/HGC002' },
+    //         { label: 'Origen', value: 'Taiwán/China' }, { label: 'Peso', value: '2.800 Kg' }, {label: 'Longitud', value: '660 mm'}
+    //     ],
+    // },
+    // {
+    //     id: 27,
+    //     name: 'Cortadora para Fleje de Acero Ybico H-410',
+    //     category: 'Equipos para Flejar',
+    //     description: 'Cortador para fleje de acero. Fabricado en acero forjado para uso rudo. Acondicionado para cortar flejes con anchos de hasta 2" en un espesor de 0.050". Con Navaja Reversible',
+    //     images: [cortadorYbicoH410],
+    //     details: [
+    //         { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'H-410' },
+    //         { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '2.900 Kg' }, {label: 'Longitud', value: '650 mm'}
+    //     ],
+    // },
+    // {
+    //     id: 28,
+    //     name: 'Selladora para Fleje de Acero Ybico',
+    //     category: 'Equipos para Flejar',
+    //     description: 'Selladora con doble mordaza de acero templado. 4 medidas para cada ancho de fleje, 3/8", 1/2", 5/8" y 3/4" y espesor de 0.025"',
+    //     images: [selladoraYbicoC3103],
+    //     details: [
+    //         { label: 'Marca', value: 'Ybico/Epac' }, { label: 'Modelos Ybico', value: 'C-3103, C-3104, C-3105, C-3106' }, { label: 'Modelos Epac', value: 'HGB811-12, HGB811-58' },
+    //         { label: 'Origen', value: 'Taiwán/China' }, { label: 'Peso', value: '0.900 Kg' }, {label: 'Longitud', value: '340 mm'}
+    //     ],
+    // },
+    // {
+    //     id: 29,
+    //     name: 'Selladora para Fleje de Acero Ybico',
+    //     category: 'Equipos para Flejar',
+    //     description: 'Selladora maneral largo con doble mordaza de acero templado. 4 medidas para cada ancho de fleje, 3/8", 1/2", 5/8" y 3/4" y espesor de 0.025"',
+    //     images: [selladoraYbicoC3203],
+    //     details: [
+    //         { label: 'Marca', value: 'Ybico' }, { label: 'Modelos', value: 'C-3203, C-3204, C-3205, C-3206' },
+    //         { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '0.900 Kg' }, {label: 'Longitud', value: '350 mm'}
+    //     ],
+    // },
+    // {
+    //     id: 30,
+    //     name: 'Selladora para Fleje de Acero Ybico C-3180',
+    //     category: 'Equipos para Flejar',
+    //     description: 'Selladora para uso rudo con doble mordaza de acero tratado. Permite anchos de fleje de 1-1/4" y espesor de 0.035" Sellado lateral',
+    //     images: [selladoraYbicoC3180],
+    //     details: [
+    //         { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'C-3180' },
+    //         { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '2.900 Kg' }, {label: 'Longitud', value: '730 mm'}
+    //     ],
+    // },
+    // {
+    //     id: 31,
+    //     name: 'Selladora para Fleje de Acero Ybico C-3160',
+    //     category: 'Equipos para Flejar',
+    //     description: 'Selladora para uso rudo con doble mordaza de acero tratado. Permite anchos de fleje de 3/4" y espesor de 0.035" Sellado lateral',
+    //     images: [selladoraYbicoC3160],
+    //     details: [
+    //         { label: 'Marca', value: 'Ybico' }, { label: 'Modelo', value: 'C-3160' },
+    //         { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '2.400 Kg' }, {label: 'Longitud', value: '660 mm'}
+    //     ],
+    // },
+    // {
+    //     id: 32,
+    //     name: 'Flejadora de Combinación para Acero Ybico SL 200',
+    //     category: 'Equipos para Flejar',
+    //     description: 'No necesita sello. Para fleje de acero de 1/2", 5/8" y 3/4" con espesores de 0.017" a 0.035".',
+    //     images: [flejadoraCombinadaYbicoP1604, flejadoraCombinadaYbicoSL200],
+    //     details: [
+    //         { label: 'Marca', value: 'Ybico' }, { label: 'Modelos', value: 'P-1604, SL 200' },
+    //         { label: 'Origen', value: 'Taiwán' }, { label: 'Peso', value: '3.500 Kg' },
+    //     ],
+    // },
+    // {
+    //     id: 33,
+    //     name: 'Portarrollo Importado',
+    //     category: 'Equipos para Flejar',
+    //     description: 'Portarrollo para fleje de plástico o acero, con mecanismo de freno, disco de metal y bandeja.',
+    //     images: [portarollosImportados1, portarollosImportados2],
+    //     details: [
+    //         { label: 'Modelo', value: 'PRI-1 (Negro), PRI-2 (Azul/Amarillo)' },
+    //         { label: 'Capacidad', value: '60 Kg.' }, { label: 'Peso', value: '16.0 Kg' },
+    //         { label: 'Centros', value: '8" y 16" de diámetro' },
+    //     ],
+    // },
 
-    // Equipos de Empaque
-    {
-        id: 34,
-        name: 'Despachador de cinta de 2" y 3"',
-        category: 'Equipos de Empaque',
-        description: 'Despachador cinta empaque . Marco Metálico. Sistema de freno ajustable, doble navaja con protección. Tira estática',
-        images: [despachadorExcellEC213, despachadorExcellEC238],
-        details: [
-            { label: 'Marca', value: 'Excell' }, { label: 'Modelos de Excell (2")', value: 'EC-213, ET-267, EC-238' },
-            { label: 'Modelos de Excell (3")', value: 'EC-313, EC-338' },
-            { label: 'Origen', value: 'Taiwán' }
-        ],
-    },
-    {
-        id: 35,
-        name: 'Despachador de Cinta Excell',
-        category: 'Equipos de Empaque',
-        description: 'Despachador para cinta de empaque con marco metálico, freno ajustable y doble navaja con protección. Disponible para 2" y 3".',
-        images: [despachadorEpac],
-        details: [
-            { label: 'Marca', value: 'E-pac' },
-            { label: 'Modelos', value: 'HGTS001, HGTS002' },
-            { label: 'Origen', value: 'China' },
-        ],
-    },
-    {
-        id: 36,
-        name: 'Despachadores de Cinta Excell',
-        category: 'Equipos de Empaque',
-        description: 'Despachador para cinta desde 1" a 3".',
-        images: [despachadorExceell1, despachadorExceell2, despachadorExceell3, despachadorExceell4, despachadorExceell5, despachadorExceell6],
-        details: [
-            { label: 'Marca', value: 'Excell' },
-            { label: 'Modelos', value: 'ET-191, ET-112, ET-168, ET-337, ET-635, LD-818' },
-            { label: 'Origen', value: 'Taiwán' },
-        ],
-    },
-    {
-        id: 37,
-        name: 'Cierrabolsas Excell',
-        category: 'Equipos de Empaque',
-        description: 'Cierrabolsas metálico con sistema de cuchilla cortadora. Para cintas de 1/2" (EX-605K) y 5/8" (EX-808K).',
-        images: [cierrabolsasExcell1, cierrabolsasExcell2],
-        details: [
-            { label: 'Marca', value: 'Excell' },
-            { label: 'Modelos', value: 'EX-605K, EX-808K' },
-            { label: 'Centro de cinta', value: '3"' },
-        ],
-    },
-    {
-        id: 38,
-        name: 'Aplicador de Película Estirable',
-        category: 'Equipos de Empaque',
-        description: 'Aplicador para película con alma de 1.5", 2" y 3". Ajuste deslizable de 12" a 20".',
-        images: [emplaye],
-        details: [
-            { label: 'Marca', value: 'Excell / E-Pac' },
-            { label: 'Modelos', value: 'SD 278E (Excell), BM500 (E-Pac)' },
-            { label: 'Peso', value: '2.1 Kg' }, { label: 'Longitud', value: '500 mm' }
-        ],
-    },
-    {
-        id: 39,
-        name: 'Aplicador de Película Manual',
-        category: 'Equipos de Empaque',
-        description: 'Aplicador de película de alma de 3". La tensión a la película es aplicada en forma manual.',
-        images: [aplicadorManualExcell, aplicadorManualExcell2],
-        details: [
-            { label: 'Marca', value: 'Excell / E-Pac' },
-            { label: 'Modelos', value: 'SD 255 y SD 7772 (Excell), FH-2723 (E-Pac)' },
-        ],
-    },
-    // Selladoras Térmicas
-    {
-        id: 40,
-        name: 'Selladora Térmica Estándar',
-        category: 'Selladoras Térmicas',
-        description: 'Selladora manual de calor directo para bolsas de plástico. Disponible en varios anchos. Voltaje de 110V.',
-        images: [selladoraTermicaEstandar],
-        details: [
-            { label: 'Modelos', value: 'ST 15, ST 25, ST 35, ST 50' },
-            { label: 'Anchos de sellado', value: '15, 25, 35, 50 cm' },
-            { label: 'Voltaje', value: '110 V' },
-        ],
-    },
-    {
-        id: 41,
-        name: 'Selladora Térmica Reforzada',
-        category: 'Selladoras Térmicas',
-        description: 'Cuerpo reforzado, switch de encendido y silicón en el sellador que permite una mayor calidad en el sellado',
-        images: [selladoraTermicaReforzada],
-        details: [
-            { label: 'Modelos', value: 'SR 15, SR 25, SR 35, SR 50' },
-            { label: 'Anchos de sellado', value: '15, 25, 35, 50 cm' },
-            { label: 'Voltaje', value: '110 V' },
-        ],
-    },
-    {
-        id: 42,
-        name: 'Pistola Industrial Reforzada',
-        category: 'Selladoras Térmicas',
-        description: 'Una vez que su producto esté embolsado en polietileno encojible, PVC. o poliolefina, la pistola de aire caliente sirve para hacer el encojimiento, por medio de aire caliente, con capacidad de trabajo industrial',
-        images: [pistolaIndustrialReforzada],
-        details: [
-            { label: 'Modelo', value: 'PI-01' },
-            { label: 'Marca', value: 'Royal' },
-            { label: 'Peso', value: '0.900 Kg' }, {label: 'Longitud', value: '335 mm'}
-        ],
-    },
-    {
-        id: 43,
-        name: 'Selladora Térmica Electrónica Hanna',
-        category: 'Selladoras Térmicas',
-        description: 'Selladora con tarjeta electrónica de alta tecnología, sella polietileno, PVC y polipropileno en 1.5 seg.',
-        images: [selladoraElectronica1, selladoraElectronica2],
-        details: [
-            { label: 'Marca', value: 'Hanna' },
-            { label: 'Modelos', value: 'NT 200/2, NT-300/2, XP-200-5, etc.' },
-            { label: 'Material', value: 'Plástico ABS (NT) o Metal Aleado (XP)' },
-        ],
-    },
-    // Engrapadoras
-    {
-        id: 44,
-        name: 'Engrapadora Neumática Tking',
-        category: 'Engrapadoras',
-        description: 'Diseñada para trabajar a alta velocidad. Retorno de martillo automático y presión y profundidad de engrape ajustable.',
-        images: [engrapadoraNeumaticaThink],
-        details: [
-            { label: 'Marca', value: 'Tking' },
-            { label: 'Modelo', value: 'ADCS19' },
-            { label: 'Peso', value: '2.65 Kg' },
-        ],
-    },
-    {
-        id: 45,
-        name: 'Engrapadora Mecánica Tking',
-        category: 'Engrapadoras',
-        description: 'Puede engrapar miles de veces sin requerir mantenimiento. Excelente inversión económica.',
-        images: [engrapadoraMecanicaThink],
-        details: [
-            { label: 'Marca', value: 'Tking' },
-            { label: 'Modelo', value: 'HDCSN1935' },
-            { label: 'Peso', value: '2.2 Kg' },
-        ],
-    },
-    // Máquinas Flejadoras
-    {
-        id: 46,
-        name: 'Máquina Flejadora Semiautomática Transpak',
-        category: 'Máquinas Flejadoras',
-        description: 'Máquina con tecnología taiwanesa, control de tensión exterior y compatible con flejes de 1/4" a 5/8".',
-        images: [maquinaFLejadoraSemiautomatica],
-        details: [
-            { label: 'Marca', value: 'Transpak' },
-            { label: 'Modelo', value: 'TP-201' },
-            { label: 'Voltaje', value: '110/115 Volts' },
-            { label: 'Peso', value: '110 Kg' },
-        ],
-    },
-    {
-        id: 47,
-        name: 'Máquina Flejadora Automática Brother WG-22XN',
-        category: 'Máquinas Flejadoras',
-        description: 'Máquina flejadora automática con tecnología china. Medida del arco 800 x 600 mm.',
-        images: [maquinaFLejadoraAutomaticaBrother],
-        details: [
-            { label: 'Marca', value: 'Brother' },
-            { label: 'Modelos', value: 'WG 22 XN, AP 8060' },
-            { label: 'Voltaje', value: '220/230 Volts' },
-        ],
-    },
-    {
-        id: 48,
-        name: 'Máquina Flejadora Automática Brother AP-8060',
-        category: 'Máquinas Flejadoras',
-        description: 'Máquina flejadora automática con tecnología china. Medida del arco 800 x 600 mm.',
-        images: [maquinaFLejadoraAutomaticaBrother2],
-        details: [
-            { label: 'Marca', value: 'Brother' },
-            { label: 'Modelos', value: 'WG 22 XN, AP 8060' },
-            { label: 'Voltaje', value: '220/230 Volts' },
-        ],
-    },
-    {
-        id: 49,
-        name: 'Flejadora Semi-Automática Epac JDH-16',
-        category: 'Máquinas Flejadoras',
-        description: 'MPuede usarse en Flejes de Polipropileno o PET (Liso o Embosado) Medidas de Fleje Permitido: 13-16 mm Esp 0.4-1.2 mmTension: 60-2100 N (Ajustable)',
-        images: [flejadoraPortatilSemiautomaticaEpac],
-        details: [
-            { label: 'Marca', value: 'E-pac' },
-            { label: 'Modelo', value: 'JDH-16' },
-            { label: 'Voltaje', value: '110 V 60 HZ' },
-            { label: 'Dimensiones con Bateria', value: '330 x 138 x 168 mm' },
-            { label: 'Peso', value: '2.750 Kg' },
-        ],
-    },
-    {
-        id: 50,
-        name: 'Flejadora Eléctrica Portátil Automática E-pac',
-        category: 'Máquinas Flejadoras',
-        description: 'Puede usarse en Flejes de Polipropileno o PET (Liso o Embosado) Medidas de Fleje Permitido: 13-16 mm Esp 0.4-1.2 mm. Tension: 600-2800 N (Ajustable). Sellado por friccion',
-        images: [flejadoraPortatilAutomaticaEpac1],
-        details: [
-            { label: 'Marca', value: 'E-pac' },
-            { label: 'Modelo', value: 'JDC 13/16' },
-            { label: 'Batería', value: 'Recargable 110V 60Hz' },
-            { label: 'Velocidad', value: '100-200 mm/s' },
-            { label: 'Peso', value: '2.7 Kg' },
-        ],
-    },
-    {
-        id: 51,
-        name: 'Flejadora Eléctrica Portátil Automática E-pac',
-        category: 'Máquinas Flejadoras',
-        description: 'Puede usarse en Flejes de Polipropileno o PET (Liso o Embosado) Medidas de Fleje Permitido: 16-19 mm Esp 0.5-1.0 mm. Tension: 600-4000 N (Ajustable)',
-        images: [flejadoraPortatilAutomaticaEpac2],
-        details: [
-            { label: 'Marca', value: 'E-pac' },
-            { label: 'Modelo', value: 'DD 163' },
-            { label: 'Batería', value: 'Recargable 110V 60Hz' },
-            { label: 'Velocidad', value: '225 mm/s' },
-            { label: 'Peso', value: '3.8 Kg' },
-        ],
-    },
-    // Consumibles
-    {
-        id: 52,
-        name: 'Película Estirable (Playo)',
-        category: 'Consumibles',
-        description: 'Película estirable para emplayar de aplicación manual. Alta resistencia y elongación. Calibre 60.',
-        images: [emplaye],
-        details: [
-            { label: 'Marca', value: 'Ultrex' },
-            { label: 'Medidas', value: '3"x1000\', 5"x1000\', 18"x1000\'' },
-            { label: 'Empaque', value: 'Caja con 4 rollos (para 18")' },
-        ],
-    },
-    {
-        id: 53,
-        name: 'Escuadra Protectora de Plástico',
-        category: 'Consumibles',
-        description: 'Escuadra plástica para protección de bultos a flejar. Para flejes de hasta 1" de ancho.',
-        images: [escuadra],
-        details: [
-            { label: 'Marca', value: 'Ultrex' },
-            { label: 'Modelo', value: 'EP-1000' },
-            { label: 'Largo de Pata', value: '1.750"' },
-        ],
-    },
-    {
-        id: 54,
-        name: 'Hebilla de Plástico para Fleje',
-        category: 'Consumibles',
-        description: 'Hebilla de polipropileno 100% virgen para flejados livianos. Para fleje de hasta 5/8".',
-        images: [hebillaDePlastico],
-        details: [
-            { label: 'Marca', value: 'Ultrex' },
-            { label: 'Modelo', value: 'HP-58' },
-            { label: 'Ancho Máximo', value: '5/8"' },
-        ],
-    },
-    {
-        id: 55,
-        name: 'Grapas Cobrizadas para Cajas',
-        category: 'Consumibles',
-        description: 'Grapas cobrizadas para cerrar cajas de cartón. Cartucho con 50 grapas.',
-        images: [grapasCobrizadas],
-        details: [
-            { label: 'Marca', value: 'Ultrex' },
-            { label: 'Modelo', value: '3315-U' },
-            { label: 'Ancho de Corona', value: '34.7 mm' },
-            { label: 'Largo de Pata', value: '15 mm' },
-        ],
-    },
-    {
-        id: 56,
-        name: 'Esquinero de Plástico Estándar',
-        category: 'Consumibles',
-        description: 'Fabricado en polipropileno, al igual que el esquinero de cartón optimiza sus empaques de pallets. Resiste la humedad y es ampliamente reutilizable.',
-        images: [esquineroDePlastico],
-        details: [
-            { label: 'Marca', value: 'Ultrex' },
-            { label: 'Modelo', value: 'EP-1750' },
-            { label: 'Largo de Pata', value: '1.500 "' },
-            { label: 'Espesor', value: '0.062"' },
-            { label: 'Peso', value: '0.200 Kg/Mt.' },
-        ],
-    },
+    // // Equipos de Empaque
+    // {
+    //     id: 34,
+    //     name: 'Despachador de cinta de 2" y 3"',
+    //     category: 'Equipos de Empaque',
+    //     description: 'Despachador cinta empaque . Marco Metálico. Sistema de freno ajustable, doble navaja con protección. Tira estática',
+    //     images: [despachadorExcellEC213, despachadorExcellEC238],
+    //     details: [
+    //         { label: 'Marca', value: 'Excell' }, { label: 'Modelos de Excell (2")', value: 'EC-213, ET-267, EC-238' },
+    //         { label: 'Modelos de Excell (3")', value: 'EC-313, EC-338' },
+    //         { label: 'Origen', value: 'Taiwán' }
+    //     ],
+    // },
+    // {
+    //     id: 35,
+    //     name: 'Despachador de Cinta Excell',
+    //     category: 'Equipos de Empaque',
+    //     description: 'Despachador para cinta de empaque con marco metálico, freno ajustable y doble navaja con protección. Disponible para 2" y 3".',
+    //     images: [despachadorEpac],
+    //     details: [
+    //         { label: 'Marca', value: 'E-pac' },
+    //         { label: 'Modelos', value: 'HGTS001, HGTS002' },
+    //         { label: 'Origen', value: 'China' },
+    //     ],
+    // },
+    // {
+    //     id: 36,
+    //     name: 'Despachadores de Cinta Excell',
+    //     category: 'Equipos de Empaque',
+    //     description: 'Despachador para cinta desde 1" a 3".',
+    //     images: [despachadorExceell1, despachadorExceell2, despachadorExceell3, despachadorExceell4, despachadorExceell5, despachadorExceell6],
+    //     details: [
+    //         { label: 'Marca', value: 'Excell' },
+    //         { label: 'Modelos', value: 'ET-191, ET-112, ET-168, ET-337, ET-635, LD-818' },
+    //         { label: 'Origen', value: 'Taiwán' },
+    //     ],
+    // },
+    // {
+    //     id: 37,
+    //     name: 'Cierrabolsas Excell',
+    //     category: 'Equipos de Empaque',
+    //     description: 'Cierrabolsas metálico con sistema de cuchilla cortadora. Para cintas de 1/2" (EX-605K) y 5/8" (EX-808K).',
+    //     images: [cierrabolsasExcell1, cierrabolsasExcell2],
+    //     details: [
+    //         { label: 'Marca', value: 'Excell' },
+    //         { label: 'Modelos', value: 'EX-605K, EX-808K' },
+    //         { label: 'Centro de cinta', value: '3"' },
+    //     ],
+    // },
+    // {
+    //     id: 38,
+    //     name: 'Aplicador de Película Estirable',
+    //     category: 'Equipos de Empaque',
+    //     description: 'Aplicador para película con alma de 1.5", 2" y 3". Ajuste deslizable de 12" a 20".',
+    //     images: [emplaye],
+    //     details: [
+    //         { label: 'Marca', value: 'Excell / E-Pac' },
+    //         { label: 'Modelos', value: 'SD 278E (Excell), BM500 (E-Pac)' },
+    //         { label: 'Peso', value: '2.1 Kg' }, { label: 'Longitud', value: '500 mm' }
+    //     ],
+    // },
+    // {
+    //     id: 39,
+    //     name: 'Aplicador de Película Manual',
+    //     category: 'Equipos de Empaque',
+    //     description: 'Aplicador de película de alma de 3". La tensión a la película es aplicada en forma manual.',
+    //     images: [aplicadorManualExcell, aplicadorManualExcell2],
+    //     details: [
+    //         { label: 'Marca', value: 'Excell / E-Pac' },
+    //         { label: 'Modelos', value: 'SD 255 y SD 7772 (Excell), FH-2723 (E-Pac)' },
+    //     ],
+    // },
+    // // Selladoras Térmicas
+    // {
+    //     id: 40,
+    //     name: 'Selladora Térmica Estándar',
+    //     category: 'Selladoras Térmicas',
+    //     description: 'Selladora manual de calor directo para bolsas de plástico. Disponible en varios anchos. Voltaje de 110V.',
+    //     images: [selladoraTermicaEstandar],
+    //     details: [
+    //         { label: 'Modelos', value: 'ST 15, ST 25, ST 35, ST 50' },
+    //         { label: 'Anchos de sellado', value: '15, 25, 35, 50 cm' },
+    //         { label: 'Voltaje', value: '110 V' },
+    //     ],
+    // },
+    // {
+    //     id: 41,
+    //     name: 'Selladora Térmica Reforzada',
+    //     category: 'Selladoras Térmicas',
+    //     description: 'Cuerpo reforzado, switch de encendido y silicón en el sellador que permite una mayor calidad en el sellado',
+    //     images: [selladoraTermicaReforzada],
+    //     details: [
+    //         { label: 'Modelos', value: 'SR 15, SR 25, SR 35, SR 50' },
+    //         { label: 'Anchos de sellado', value: '15, 25, 35, 50 cm' },
+    //         { label: 'Voltaje', value: '110 V' },
+    //     ],
+    // },
+    // {
+    //     id: 42,
+    //     name: 'Pistola Industrial Reforzada',
+    //     category: 'Selladoras Térmicas',
+    //     description: 'Una vez que su producto esté embolsado en polietileno encojible, PVC. o poliolefina, la pistola de aire caliente sirve para hacer el encojimiento, por medio de aire caliente, con capacidad de trabajo industrial',
+    //     images: [pistolaIndustrialReforzada],
+    //     details: [
+    //         { label: 'Modelo', value: 'PI-01' },
+    //         { label: 'Marca', value: 'Royal' },
+    //         { label: 'Peso', value: '0.900 Kg' }, {label: 'Longitud', value: '335 mm'}
+    //     ],
+    // },
+    // {
+    //     id: 43,
+    //     name: 'Selladora Térmica Electrónica Hanna',
+    //     category: 'Selladoras Térmicas',
+    //     description: 'Selladora con tarjeta electrónica de alta tecnología, sella polietileno, PVC y polipropileno en 1.5 seg.',
+    //     images: [selladoraElectronica1, selladoraElectronica2],
+    //     details: [
+    //         { label: 'Marca', value: 'Hanna' },
+    //         { label: 'Modelos', value: 'NT 200/2, NT-300/2, XP-200-5, etc.' },
+    //         { label: 'Material', value: 'Plástico ABS (NT) o Metal Aleado (XP)' },
+    //     ],
+    // },
+    // // Engrapadoras
+    // {
+    //     id: 44,
+    //     name: 'Engrapadora Neumática Tking',
+    //     category: 'Engrapadoras',
+    //     description: 'Diseñada para trabajar a alta velocidad. Retorno de martillo automático y presión y profundidad de engrape ajustable.',
+    //     images: [engrapadoraNeumaticaThink],
+    //     details: [
+    //         { label: 'Marca', value: 'Tking' },
+    //         { label: 'Modelo', value: 'ADCS19' },
+    //         { label: 'Peso', value: '2.65 Kg' },
+    //     ],
+    // },
+    // {
+    //     id: 45,
+    //     name: 'Engrapadora Mecánica Tking',
+    //     category: 'Engrapadoras',
+    //     description: 'Puede engrapar miles de veces sin requerir mantenimiento. Excelente inversión económica.',
+    //     images: [engrapadoraMecanicaThink],
+    //     details: [
+    //         { label: 'Marca', value: 'Tking' },
+    //         { label: 'Modelo', value: 'HDCSN1935' },
+    //         { label: 'Peso', value: '2.2 Kg' },
+    //     ],
+    // },
+    // // Máquinas Flejadoras
+    // {
+    //     id: 46,
+    //     name: 'Máquina Flejadora Semiautomática Transpak',
+    //     category: 'Máquinas Flejadoras',
+    //     description: 'Máquina con tecnología taiwánesa, control de tensión exterior y compatible con flejes de 1/4" a 5/8".',
+    //     images: [maquinaFLejadoraSemiautomatica],
+    //     details: [
+    //         { label: 'Marca', value: 'Transpak' },
+    //         { label: 'Modelo', value: 'TP-201' },
+    //         { label: 'Voltaje', value: '110/115 Volts' },
+    //         { label: 'Peso', value: '110 Kg' },
+    //     ],
+    // },
+    // {
+    //     id: 47,
+    //     name: 'Máquina Flejadora Automática Brother WG-22XN',
+    //     category: 'Máquinas Flejadoras',
+    //     description: 'Máquina flejadora automática con tecnología china. Medida del arco 800 x 600 mm.',
+    //     images: [maquinaFLejadoraAutomaticaBrother],
+    //     details: [
+    //         { label: 'Marca', value: 'Brother' },
+    //         { label: 'Modelos', value: 'WG 22 XN, AP 8060' },
+    //         { label: 'Voltaje', value: '220/230 Volts' },
+    //     ],
+    // },
+    // {
+    //     id: 48,
+    //     name: 'Máquina Flejadora Automática Brother AP-8060',
+    //     category: 'Máquinas Flejadoras',
+    //     description: 'Máquina flejadora automática con tecnología china. Medida del arco 800 x 600 mm.',
+    //     images: [maquinaFLejadoraAutomaticaBrother2],
+    //     details: [
+    //         { label: 'Marca', value: 'Brother' },
+    //         { label: 'Modelos', value: 'WG 22 XN, AP 8060' },
+    //         { label: 'Voltaje', value: '220/230 Volts' },
+    //     ],
+    // },
+    // {
+    //     id: 49,
+    //     name: 'Flejadora Semi-Automática Epac JDH-16',
+    //     category: 'Máquinas Flejadoras',
+    //     description: 'MPuede usarse en Flejes de Polipropileno o PET (Liso o Embosado) Medidas de Fleje Permitido: 13-16 mm Esp 0.4-1.2 mmTension: 60-2100 N (Ajustable)',
+    //     images: [flejadoraPortatilSemiautomaticaEpac],
+    //     details: [
+    //         { label: 'Marca', value: 'E-pac' },
+    //         { label: 'Modelo', value: 'JDH-16' },
+    //         { label: 'Voltaje', value: '110 V 60 HZ' },
+    //         { label: 'Dimensiones con Bateria', value: '330 x 138 x 168 mm' },
+    //         { label: 'Peso', value: '2.750 Kg' },
+    //     ],
+    // },
+    // {
+    //     id: 50,
+    //     name: 'Flejadora Eléctrica Portátil Automática E-pac',
+    //     category: 'Máquinas Flejadoras',
+    //     description: 'Puede usarse en Flejes de Polipropileno o PET (Liso o Embosado) Medidas de Fleje Permitido: 13-16 mm Esp 0.4-1.2 mm. Tension: 600-2800 N (Ajustable). Sellado por friccion',
+    //     images: [flejadoraPortatilAutomaticaEpac1],
+    //     details: [
+    //         { label: 'Marca', value: 'E-pac' },
+    //         { label: 'Modelo', value: 'JDC 13/16' },
+    //         { label: 'Batería', value: 'Recargable 110V 60Hz' },
+    //         { label: 'Velocidad', value: '100-200 mm/s' },
+    //         { label: 'Peso', value: '2.7 Kg' },
+    //     ],
+    // },
+    // {
+    //     id: 51,
+    //     name: 'Flejadora Eléctrica Portátil Automática E-pac',
+    //     category: 'Máquinas Flejadoras',
+    //     description: 'Puede usarse en Flejes de Polipropileno o PET (Liso o Embosado) Medidas de Fleje Permitido: 16-19 mm Esp 0.5-1.0 mm. Tension: 600-4000 N (Ajustable)',
+    //     images: [flejadoraPortatilAutomaticaEpac2],
+    //     details: [
+    //         { label: 'Marca', value: 'E-pac' },
+    //         { label: 'Modelo', value: 'DD 163' },
+    //         { label: 'Batería', value: 'Recargable 110V 60Hz' },
+    //         { label: 'Velocidad', value: '225 mm/s' },
+    //         { label: 'Peso', value: '3.8 Kg' },
+    //     ],
+    // },
+    // // Consumibles
+    // {
+    //     id: 52,
+    //     name: 'Película Estirable (Playo)',
+    //     category: 'Consumibles',
+    //     description: 'Película estirable para emplayar de aplicación manual. Alta resistencia y elongación. Calibre 60.',
+    //     images: [emplaye],
+    //     details: [
+    //         { label: 'Marca', value: 'Ultrex' },
+    //         { label: 'Medidas', value: '3"x1000\', 5"x1000\', 18"x1000\'' },
+    //         { label: 'Empaque', value: 'Caja con 4 rollos (para 18")' },
+    //     ],
+    // },
+    // {
+    //     id: 53,
+    //     name: 'Escuadra Protectora de Plástico',
+    //     category: 'Consumibles',
+    //     description: 'Escuadra plástica para protección de bultos a flejar. Para flejes de hasta 1" de ancho.',
+    //     images: [escuadra],
+    //     details: [
+    //         { label: 'Marca', value: 'Ultrex' },
+    //         { label: 'Modelo', value: 'EP-1000' },
+    //         { label: 'Largo de Pata', value: '1.750"' },
+    //     ],
+    // },
+    // {
+    //     id: 54,
+    //     name: 'Hebilla de Plástico para Fleje',
+    //     category: 'Consumibles',
+    //     description: 'Hebilla de polipropileno 100% virgen para flejados livianos. Para fleje de hasta 5/8".',
+    //     images: [hebillaDePlastico],
+    //     details: [
+    //         { label: 'Marca', value: 'Ultrex' },
+    //         { label: 'Modelo', value: 'HP-58' },
+    //         { label: 'Ancho Máximo', value: '5/8"' },
+    //     ],
+    // },
+    // {
+    //     id: 55,
+    //     name: 'Grapas Cobrizadas para Cajas',
+    //     category: 'Consumibles',
+    //     description: 'Grapas cobrizadas para cerrar cajas de cartón. Cartucho con 50 grapas.',
+    //     images: [grapasCobrizadas],
+    //     details: [
+    //         { label: 'Marca', value: 'Ultrex' },
+    //         { label: 'Modelo', value: '3315-U' },
+    //         { label: 'Ancho de Corona', value: '34.7 mm' },
+    //         { label: 'Largo de Pata', value: '15 mm' },
+    //     ],
+    // },
+    // {
+    //     id: 56,
+    //     name: 'Esquinero de Plástico Estándar',
+    //     category: 'Consumibles',
+    //     description: 'Fabricado en polipropileno, al igual que el esquinero de cartón optimiza sus empaques de pallets. Resiste la humedad y es ampliamente reutilizable.',
+    //     images: [esquineroDePlastico],
+    //     details: [
+    //         { label: 'Marca', value: 'Ultrex' },
+    //         { label: 'Modelo', value: 'EP-1750' },
+    //         { label: 'Largo de Pata', value: '1.500 "' },
+    //         { label: 'Espesor', value: '0.062"' },
+    //         { label: 'Peso', value: '0.200 Kg/Mt.' },
+    //     ],
+    // },
 ].map(product => ({ ...product, slug: generateSlug(product.name) })); // Agregamos el slug a cada producto

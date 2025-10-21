@@ -1,5 +1,6 @@
 <script setup>
 import LandingLayout from '@/Layouts/LandingLayout.vue';
+import ProductCard from '@/Components/ProductCard.vue'; // 1. Import the new component
 import { ref, onMounted, computed, watch } from 'vue';
 import { router } from '@inertiajs/vue3';
 import { categories, allProducts } from './products.js';
@@ -10,18 +11,11 @@ const props = defineProps({
 });
 
 // --- State Management ---
+// State related to individual cards (expandedDetails, etc.) has been removed.
 const activeCategory = ref('Todos');
 const displayedCount = ref(12);
 const isMounted = ref(false);
-const currentImageIndexes = ref({});
 const searchQuery = ref(props.initialSearch || '');
-
-// --- New State for Expandable Sections ---
-// Tracks which product cards have their details expanded.
-const expandedDetails = ref({});
-// Tracks which product cards have their descriptions expanded.
-const expandedDescriptions = ref({});
-
 
 // --- Computed Properties ---
 
@@ -64,40 +58,13 @@ const setActiveCategory = (category) => {
     displayedCount.value = 12;
 };
 
-// Opens WhatsApp with a pre-filled quote request message.
+// This method now handles the event emitted from the ProductCard component.
 const requestQuote = (productName) => {
     const phoneNumber = '5213310440741';
     const message = `Hola, me gustaría solicitar una cotización para el producto: ${productName}`;
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
 };
-
-// --- Image Carousel Methods ---
-const nextImage = (productId, imageCount) => {
-    currentImageIndexes.value[productId] = (currentImageIndexes.value[productId] + 1) % imageCount;
-};
-
-const prevImage = (productId, imageCount) => {
-    currentImageIndexes.value[productId] = (currentImageIndexes.value[productId] - 1 + imageCount) % imageCount;
-};
-
-// --- New Methods for Toggling Content ---
-/**
- * Toggles the visibility of the details section for a specific product.
- * @param {number} productId - The ID of the product.
- */
-const toggleDetails = (productId) => {
-    expandedDetails.value[productId] = !expandedDetails.value[productId];
-};
-
-/**
- * Toggles the expanded state of the description for a specific product.
- * @param {number} productId - The ID of the product.
- */
-const toggleDescription = (productId) => {
-    expandedDescriptions.value[productId] = !expandedDescriptions.value[productId];
-};
-
 
 // --- Watchers ---
 
@@ -112,14 +79,11 @@ watch(searchQuery, (newValue) => {
 
 // --- Lifecycle Hooks ---
 
-// Initializes animations and image indexes on component mount.
+// Initializes animations on component mount.
 onMounted(() => {
     setTimeout(() => {
         isMounted.value = true;
     }, 100);
-    allProducts.forEach(p => {
-        currentImageIndexes.value[p.id] = 0;
-    });
 });
 </script>
 
@@ -185,72 +149,15 @@ onMounted(() => {
             </div>
 
             <!-- Products Grid -->
-             <div v-if="visibleProducts.length > 0" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                <div
+             <div v-if="visibleProducts.length > 0" class="grid grid-cols-1 gap-5">
+                <!-- 2. Use the new ProductCard component in a loop -->
+                <ProductCard
                     v-for="(product, index) in visibleProducts"
                     :key="product.id"
-                    class="bg-white rounded-lg shadow-md overflow-hidden group transform hover:-translate-y-2 transition-all duration-500 ease-out flex flex-col self-start"
-                    :style="{ transitionDelay: `${index * 50}ms` }"
-                    :class="isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'"
-                >
-                    <!-- Image Carousel -->
-                    <div class="relative w-full h-56 bg-gray-50">
-                        <img
-                            v-for="(image, imgIndex) in product.images"
-                            :key="imgIndex"
-                            :src="image"
-                            :alt="`${product.name} - imagen ${imgIndex + 1}`"
-                            class="absolute inset-0 w-full h-full object-contain transition-opacity duration-300"
-                            :class="currentImageIndexes[product.id] === imgIndex ? 'opacity-100' : 'opacity-0'"
-                        >
-                        <!-- Carousel Controls -->
-                        <template v-if="product.images.length > 1">
-                            <button @click.stop.prevent="prevImage(product.id, product.images.length)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-30 text-white p-2 rounded-full transition-opacity">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
-                            </button>
-                            <button @click.stop.prevent="nextImage(product.id, product.images.length)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-30 text-white p-2 rounded-full transition-opacity">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
-                            </button>
-                        </template>
-                    </div>
-                    <!-- Product Info -->
-                    <div class="p-5 flex flex-col flex-grow">
-                        <p class="text-xs text-amber-600 font-semibold mb-1">{{ product.category }}</p>
-                        <h3 class="text-lg font-semibold text-gray-800 mb-2" :title="product.name">{{ product.name }}</h3>
-
-                        <!-- Expandable Description -->
-                        <div class="text-sm text-gray-600 mb-4 flex-grow">
-                            <p :class="{ 'line-clamp-3': !expandedDescriptions[product.id] }">
-                                {{ product.description }}
-                            </p>
-                            <button v-if="product.description.length > 100" @click="toggleDescription(product.id)" class="text-amber-600 hover:text-amber-700 text-xs font-semibold mt-1">
-                                {{ expandedDescriptions[product.id] ? 'Leer menos' : 'Leer más' }}
-                            </button>
-                        </div>
-
-                        <!-- Collapsible Details Section -->
-                        <transition name="fade">
-                            <div v-if="expandedDetails[product.id]" class="mb-4 bg-gray-50 p-3 rounded-md">
-                                <h4 class="font-semibold text-gray-700 mb-2 text-sm">Detalles:</h4>
-                                <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
-                                    <li v-for="detail in product.details" :key="detail.label">
-                                        <span class="font-medium">{{ detail.label }}:</span> {{ detail.value }}
-                                    </li>
-                                </ul>
-                            </div>
-                        </transition>
-
-                        <!-- Action Buttons -->
-                        <div class="mt-auto pt-4 border-t border-gray-100 grid grid-cols-2 gap-3">
-                             <button @click="toggleDetails(product.id)" class="w-full text-center bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-lg hover:bg-gray-300 transition-colors duration-300 text-sm">
-                                {{ expandedDetails[product.id] ? 'Ocultar' : 'Detalles' }}
-                            </button>
-                            <button @click="requestQuote(product.name)" class="w-full text-center bg-slate-800 text-white font-semibold py-2 px-4 rounded-lg hover:bg-slate-700 transition-colors duration-300 text-sm">
-                               Cotizar
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                    :product="product"
+                    :is-mounted="isMounted"
+                    :index="index"
+                />
             </div>
             <!-- No results message -->
             <div v-else class="text-center py-16">
@@ -268,34 +175,13 @@ onMounted(() => {
                     Cargar más productos
                 </button>
             </div>
-            <a v-else href="https://www.propackgdl.com.mx/" class="mt-10 inline-block bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl">
+            <!-- <a v-else href="https://www.propackgdl.com.mx/" class="mt-10 inline-block bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl">
                 Visita nuestra tienda
-            </a>
+            </a> -->
         </div>
     </LandingLayout>
 </template>
 
 <style scoped>
-/* Styles for the line clamp functionality */
-.line-clamp-3 {
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-}
-
-/* Styles for the details section transition */
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.3s ease, transform 0.3s ease, max-height 0.3s ease;
-  max-height: 200px; /* Adjust as needed */
-  overflow: hidden;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-  transform: translateY(-10px);
-  max-height: 0;
-}
+/* Scoped styles can remain if they are specific to the layout of this page */
 </style>
