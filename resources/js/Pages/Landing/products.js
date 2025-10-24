@@ -6,6 +6,7 @@ import flejeNegro1 from '@/../../public/images/Products/fleje-de-plastico-manual
 import flejeNegro2 from '@/../../public/images/Products/fleje-de-plastico-manual-ultrex-2.png';
 import flejeNegroCajaCuadrada from '@/../../public/images/Products/fleje-de-plastico-caja-cuadrada-ultrex-codigo-b.jpg';
 import flejeNegroCajaOctagonal from '@/../../public/images/Products/fleje-de-plastico-caja-octagonal-ultrex-codigo-c.jpg';
+import flejeJumbo from '@/../../public/images/Products/jumbo.png';
 
 // Fleje prolipropileno virgen
 import flejeVirgen from '@/../../public/images/Products/fleje-virgen.jpg';
@@ -20,7 +21,7 @@ import tensionadoraYbicoP262 from '@/../../public/images/products/tensionadora-1
 import tensionadoraYbicoS290 from '@/../../public/images/products/tensionadora-1121-s290-acero.jpg';
 import tensionadoraYbicoS298 from '@/../../public/images/products/tensionadora-1122-s298-acero.jpg';
 import tensionadoraYbicoS210 from '@/../../public/images/products/tensionadora-1123-s210-acero.jpg';
-import tensionadoraYbicoS220 from '@/../../public/images/products/tensionadora-fleje-ybico-s220.png';
+import tensionadoraYbicoS220 from '@/../../public/images/products/s2220.png';
 import tensionadoraYbicoS225 from '@/../../public/images/products/tensionadora-1125-s225-acero.jpg';
 import tensionadoraYbicoS260 from '@/../../public/images/products/tensionadora-ybico-s260.png';
 import tensionadoraYbicoS262 from '@/../../public/images/products/tensionadora-1127-s262-acero.jpg';
@@ -47,6 +48,7 @@ import selladoraYbicoC3160 from '@/../../public/images/products/selladora-acero-
 // Cortadores
 import cortadorYbicoH201 from '@/../../public/images/products/cortadora-ybico-H-201.png';
 import cortadorYbicoH305 from '@/../../public/images/products/cortadora-ybico-H-305.png';
+import cortadorYbicoHGC001 from '@/../../public/images/products/hgc001.png';
 import cortadorYbicoHGC002 from '@/../../public/images/products/cortadora-epac-HGC002.png';
 import cortadorYbicoH410 from '@/../../public/images/products/cortadora-ybico-H-410.png';
 
@@ -60,6 +62,8 @@ import despachadorExceell3 from '@/../../public/images/products/despachador-fijo
 import despachadorExceell4 from '@/../../public/images/products/despachador-fijo-masking-tape-1727-et168.jpg';
 import despachadorExceell5 from '@/../../public/images/products/despachador-fijo-multi-cintas-1728-et337-300x300.jpg';
 import despachadorExceell6 from '@/../../public/images/products/despachador-vegetales-1730-et-635.jpg';
+import despachadorHGTS001 from '@/../../public/images/products/hgts001.png';
+import despachadorET267 from '@/../../public/images/products/et267.png';
 
 // Cierrabolsas
 import cierrabolsasExcell1 from '@/../../public/images/products/cierra-bolsa-cinta-1-2-ex-605k-v2.jpg';
@@ -69,6 +73,7 @@ import cierrabolsasExcell2 from '@/../../public/images/products/cierra-bolsa-cin
 import aplicadorExcell from '@/../../public/images/products/sf-2781e.png';
 import aplicadorManualExcell from '@/../../public/images/products/sf-755-hand-saver.png';
 import aplicadorManualExcell2 from '@/../../public/images/products/sd-750a.png';
+import aplicadorManualBM500 from '@/../../public/images/products/bm500.png';
 
 // Selladoras termicas
 import selladoraTermicaEstandar from '@/../../public/images/products/selladora-termica-estandar-2351-st15.jpg';
@@ -179,7 +184,7 @@ export const allProducts = [
             {
                 code: 'E Automático en caja',
                 brand: 'Ultrex',
-                images: [],
+                images: [flejeJumbo],
                 model: 'E Automático en caja',
                 details: [
                     { label: 'Centro', value: '8" x 8"' },
@@ -723,7 +728,7 @@ export const allProducts = [
             {
                 code: '1124',
                 brand: 'Ybico',
-                images: [],
+                images: [tensionadoraYbicoS220],
                 model: 'S-220',
                 details: [
                     { label: 'Hecho en', value: 'Taiwán' },
@@ -950,7 +955,7 @@ export const allProducts = [
             {
                 code: '1163',
                 brand: 'Ybico',
-                images: [],
+                images: [cortadorYbicoHGC001],
                 model: 'HGC001',
                 details: [
                     { label: 'Hecho en', value: 'China' },
@@ -1305,7 +1310,7 @@ export const allProducts = [
             {
                 code: '2701',
                 brand: 'E-Pac',
-                images: [],
+                images: [despachadorHGTS001],
                 model: 'HGTS001',
                 details: [
                     { label: 'Uso', value: 'Normal' },
@@ -1469,7 +1474,7 @@ export const allProducts = [
             {
                 code: '1571',
                 brand: 'E-pac',
-                images: [],
+                images: [aplicadorManualBM500],
                 model: 'BM500',
                 details: [
                     { label: 'Peso', value: '2.100 Kg.' },

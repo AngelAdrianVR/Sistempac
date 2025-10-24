@@ -153,7 +153,15 @@ const socialLinks = [
                                     <li v-if="searchResults.length === 0" class="px-4 py-3 text-sm text-gray-500">No se encontraron resultados.</li>
                                     <li v-for="product in searchResults" :key="product.id" @click="goToProduct(product)" class="cursor-pointer hover:bg-gray-100">
                                         <div class="flex items-center px-4 py-3">
-                                            <img :src="product.images[0]" :alt="product.name" class="w-10 h-10 object-cover rounded-md mr-3">
+                                            <!-- FIX: Check for models and images before rendering -->
+                                            <img v-if="product.models && product.models.length > 0 && product.models[0].images && product.models[0].images.length > 0"
+                                                 :src="product.models[0].images[0]"
+                                                 :alt="product.name"
+                                                 class="w-10 h-10 object-cover rounded-md mr-3 flex-shrink-0">
+                                            <!-- Fallback placeholder if no image is available -->
+                                            <div v-else class="w-10 h-10 bg-gray-200 rounded-md mr-3 flex items-center justify-center flex-shrink-0">
+                                                <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14"></path></svg>
+                                            </div>
                                             <span class="text-sm text-gray-700 font-medium">{{ product.name }}</span>
                                         </div>
                                     </li>
@@ -206,7 +214,15 @@ const socialLinks = [
                                     <li v-if="searchResults.length === 0" class="px-4 py-3 text-sm text-gray-500">No se encontraron resultados.</li>
                                     <li v-for="product in searchResults" :key="product.id" @click="goToProduct(product)" class="cursor-pointer hover:bg-gray-100">
                                          <div class="flex items-center px-4 py-3">
-                                            <img :src="product.images[0]" :alt="product.name" class="w-10 h-10 object-cover rounded-md mr-3">
+                                            <!-- FIX: Check for models and images before rendering -->
+                                            <img v-if="product.models && product.models.length > 0 && product.models[0].images && product.models[0].images.length > 0"
+                                                 :src="product.models[0].images[0]"
+                                                 :alt="product.name"
+                                                 class="w-10 h-10 object-cover rounded-md mr-3 flex-shrink-0">
+                                            <!-- Fallback placeholder if no image is available -->
+                                            <div v-else class="w-10 h-10 bg-gray-200 rounded-md mr-3 flex items-center justify-center flex-shrink-0">
+                                                <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14"></path></svg>
+                                            </div>
                                             <span class="text-sm text-gray-700 font-medium">{{ product.name }}</span>
                                         </div>
                                     </li>
