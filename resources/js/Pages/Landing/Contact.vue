@@ -33,8 +33,10 @@ onMounted(() => {
 
 // Información de contacto
 const contactInfo = [
-    { icon: 'phone', text: '33-3656-6410', href: 'tel:3336566410' },
-    { icon: 'mail', text: 'ventas@propackgdl.com.mx', href: 'mailto:ventas@propackgdl.com.mx' },
+    { icon: 'phone', text: 'Zona Norte: 33-1146-4928', href: 'tel:3311464928' },
+    { icon: 'phone', text: 'Zona Sur: 33-1044-0741', href: 'tel:3310440741' },
+    // { icon: 'mail', text: 'propacktere@gmail.com', href: 'mailto:propacktere@gmail.com' },
+    // { icon: 'mail', text: 'sistempac1@gmail.com', href: 'mailto:sistempac1@gmail.com' },
     { icon: 'location', text: 'Aluminio 23, San José del Bajío, 45140 Zapopan, Jal.', href: 'https://maps.app.goo.gl/yYd5gLqGzX5a9zJG9' },
 ];
 </script>

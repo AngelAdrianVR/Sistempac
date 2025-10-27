@@ -74,6 +74,7 @@ import aplicadorExcell from '@/../../public/images/products/sf-2781e.png';
 import aplicadorManualExcell from '@/../../public/images/products/sf-755-hand-saver.png';
 import aplicadorManualExcell2 from '@/../../public/images/products/sd-750a.png';
 import aplicadorManualBM500 from '@/../../public/images/products/bm500.png';
+import aplicadorManualFH2723 from '@/../../public/images/products/aplicadorManualFH2723.png';
 
 // Selladoras termicas
 import selladoraTermicaEstandar from '@/../../public/images/products/selladora-termica-estandar-2351-st15.jpg';
@@ -1171,6 +1172,17 @@ export const allProducts = [
                     { label: 'Peso', value: '3.500 Kg' },
                 ]
             },
+            {
+                code: '16070',
+                brand: 'E-pac',
+                images: [flejadoraCombinadaYbicoP1604],
+                model: 'ST-13',
+                details: [
+                    { label: 'Piezas/Caja', value: '1' },
+                    { label: 'Longitud', value: '40 Cm' },
+                    { label: 'Peso', value: '3.500 Kg' },
+                ]
+            },
         ],
     },
     {
@@ -1517,7 +1529,7 @@ export const allProducts = [
             {
                 code: '2723',
                 brand: 'E-pac',
-                images: [],
+                images: [aplicadorManualFH2723],
                 model: 'FH-2723',
                 details: [
                     { label: 'Pzas/Caja', value: '75' },

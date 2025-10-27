@@ -70,9 +70,10 @@ const footerSections = {
     contacto: {
         title: 'Contacto',
         items: [
-            { text: '33-3656-6410', icon: 'phone' },
             { text: 'Zona Norte: 33-1146-4928', icon: 'phone' },
             { text: 'Zona Sur: 33-1044-0741', icon: 'phone' },
+            { text: 'propacktere@gmail.com', icon: 'mail' },
+            { text: 'sistempac1@gmail.com', icon: 'mail' },
         ]
     },
     horarios: {
@@ -113,7 +114,7 @@ const socialLinks = [
                     <!-- Logo -->
                     <div class="flex-shrink-0">
                         <Link :href="route('landing.index')" class="text-2xl font-bold">
-                            <img class="w-72 md:w-60 lg:w-96" src="/images/logo_sistempac.png" alt="PROPACK">
+                            <img class="w-72 md:w-60 lg:w-80" src="/images/logo_sistempac.png" alt="PROPACK">
                         </Link>
                     </div>
 
@@ -262,6 +263,7 @@ const socialLinks = [
                         <p class="text-sm text-gray-400">
                             Soluciones integrales en empaque y embalaje para proteger y transportar tus productos con la máxima seguridad y eficiencia.
                         </p>
+                        <img class="w-56 mt-7" src="/images/packtrade.jpg" alt="PROPACK">
                     </div>
 
                     <!-- Contact -->
@@ -269,7 +271,10 @@ const socialLinks = [
                         <h4 class="font-semibold text-white tracking-wider uppercase mb-4">{{ footerSections.contacto.title }}</h4>
                         <ul class="space-y-2">
                             <li v-for="item in footerSections.contacto.items" :key="item.text" class="flex items-center text-sm">
-                                <svg class="w-4 h-4 mr-2 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                                <svg v-if="item.icon === 'phone'" class="w-4 h-4 mr-2 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                                <svg v-if="item.icon === 'mail'" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-2 text-amber-500">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                                </svg>
                                 <span>{{ item.text }}</span>
                             </li>
                         </ul>

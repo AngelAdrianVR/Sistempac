@@ -92,6 +92,7 @@ onMounted(() => {
         <!-- Hero Section -->
         <section class="bg-slate-100 py-12 md:py-20">
             <div class="container mx-auto px-4 text-center">
+                <img class="w-72" src="/images/packtrade.jpg" alt="PROPACK">
                 <h1
                     class="text-4xl md:text-5xl font-extrabold text-slate-800 mb-4 transition-all duration-700 ease-out"
                     :class="isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'"
