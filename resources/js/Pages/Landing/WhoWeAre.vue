@@ -9,7 +9,7 @@ const isMounted = ref(false);
 const images = ref([
     // Se asume que las imágenes están en la carpeta `public/images`
     '/images/maquina-flejadora.png',
-    '/images/maquina-flejadora2.jpg',
+    // '/images/maquina-flejadora2.jpg',
     '/images/despachador-cinta.png',
     '/images/selladora.png',
     '/images/fleje_negro_landing.png'
@@ -70,7 +70,7 @@ onMounted(() => {
                         :class="isMounted ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'"
                     >
                         <h2 class="text-3xl font-bold text-slate-800 mb-4">Nuestra Historia</h2>
-                        <h3 class="text-blue-900 font-bold">SISTEMPAC, INDUSTRIAS ORJI, S.A. DE C.V.</h3>
+                        <h3 class="text-blue-900 font-bold">SISTEMPAC, FLEJES Y PRODUCTOS PARA EMPAQUE S.A DE C.V.</h3>
                         <p class="text-gray-600 mb-4 leading-relaxed">
                             nace en 1981, desde su inicio hemos tenido el firme compromiso de otorgar calidad en nuestros productos y en nuestro servicio, para nosotros las necesidades del cliente son el motor de nuestra compañía que nos impulsa para cumplir con las expectativas que el cliente requiere de sus proveedores.
                         </p>
@@ -78,9 +78,9 @@ onMounted(() => {
                             A lo largo de los años, hemos crecido y expandido nuestro catálogo, incorporando maquinaria de última generación y materiales sostenibles para responder a las necesidades cambiantes del mercado. Nuestro compromiso con la excelencia y la satisfacción del cliente ha sido el pilar de nuestro éxito.
                         </p>
                         <!-- Botón "Visita nuestra tienda" -->
-                        <a href="https://www.propackgdl.com.mx/" class="inline-block bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl">
+                        <!-- <a href="https://www.propackgdl.com.mx/" class="inline-block bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl">
                             Visita nuestra tienda
-                        </a>
+                        </a> -->
                     </div>
                     <!-- Carrusel de Imágenes -->
                     <div

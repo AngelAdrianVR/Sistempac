@@ -52,7 +52,7 @@ import cortadorYbicoHGC001 from '@/../../public/images/products/hgc001.png';
 import cortadorYbicoHGC002 from '@/../../public/images/products/cortadora-epac-HGC002.png';
 import cortadorYbicoH410 from '@/../../public/images/products/cortadora-ybico-H-410.png';
 
-// Despachadores
+// Despachadores-Empaquetadoras
 import despachadorExcellEC213 from '@/../../public/images/products/despachador-cinta-excell-ec213.png';
 import despachadorExcellEC238 from '@/../../public/images/products/despachador-reforzado-cinta-2-y-3-ec238.jpg';
 import despachadorEpac from '@/../../public/images/products/despachador-epack.png';
@@ -64,6 +64,7 @@ import despachadorExceell5 from '@/../../public/images/products/despachador-fijo
 import despachadorExceell6 from '@/../../public/images/products/despachador-vegetales-1730-et-635.jpg';
 import despachadorHGTS001 from '@/../../public/images/products/hgts001.png';
 import despachadorET267 from '@/../../public/images/products/et267.png';
+import emplayadoraAutomatica from '@/../../public/images/products/EmplayadoraAutomatica.png';
 
 // Cierrabolsas
 import cierrabolsasExcell1 from '@/../../public/images/products/cierra-bolsa-cinta-1-2-ex-605k-v2.jpg';
@@ -74,6 +75,7 @@ import aplicadorExcell from '@/../../public/images/products/sf-2781e.png';
 import aplicadorManualExcell from '@/../../public/images/products/sf-755-hand-saver.png';
 import aplicadorManualExcell2 from '@/../../public/images/products/sd-750a.png';
 import aplicadorManualBM500 from '@/../../public/images/products/bm500.png';
+import aplicadorManualFH2723 from '@/../../public/images/products/aplicadorManualFH2723.png';
 
 // Selladoras termicas
 import selladoraTermicaEstandar from '@/../../public/images/products/selladora-termica-estandar-2351-st15.jpg';
@@ -92,6 +94,7 @@ import portarollosImportados2 from '@/../../public/images/products/portarrollos-
 
 // Consumibles
 import emplaye from '@/../../public/images/products/pelicula-emplaye.png';
+import emplayeGrande from '@/../../public/images/products/PeliculaMaquina.png';
 import escuadra from '@/../../public/images/products/escuadra-protectora-estandar-ultrex.jpg';
 import hebillaDePlastico from '@/../../public/images/products/hebilla-para-fleje-de-plastico-estandar-ultrex-c.jpg';
 import grapasCobrizadas from '@/../../public/images/products/grapas-cobrizadas-3315u.jpg';
@@ -151,16 +154,16 @@ export const allProducts = [
                     { label: 'Caja (cm)', value: '-' },
                 ]
             },
-            {
-                code: 'B Caja cuadrada',
-                brand: 'Ultrex',
-                images: [flejeNegroCajaCuadrada],
-                model: 'B Caja cuadrada',
-                details: [
-                    { label: 'Centro', value: '-' },
-                    { label: 'Caja (cm)', value: '35 x 35 x 20' },
-                ]
-            },
+            // {
+            //     code: 'B Caja cuadrada',
+            //     brand: 'Ultrex',
+            //     images: [flejeNegroCajaCuadrada],
+            //     model: 'B Caja cuadrada',
+            //     details: [
+            //         { label: 'Centro', value: '-' },
+            //         { label: 'Caja (cm)', value: '35 x 35 x 20' },
+            //     ]
+            // },
             {
                 code: 'C Caja octagonal',
                 brand: 'Ultrex',
@@ -953,7 +956,7 @@ export const allProducts = [
         description: 'Cortador para fleje de acero. Fabricado en acero forjado para uso rudo. Acondicionado para cortar flejes con anchos de 3/8" hasta 1-1/4"en un espesor de 0.031"',
         models: [
             {
-                code: '1163',
+                code: '1664',
                 brand: 'Ybico',
                 images: [cortadorYbicoHGC001],
                 model: 'HGC001',
@@ -1171,6 +1174,17 @@ export const allProducts = [
                     { label: 'Peso', value: '3.500 Kg' },
                 ]
             },
+            {
+                code: '16070',
+                brand: 'E-pac',
+                images: [flejadoraCombinadaYbicoP1604],
+                model: 'ST-13',
+                details: [
+                    { label: 'Piezas/Caja', value: '1' },
+                    { label: 'Longitud', value: '40 Cm' },
+                    { label: 'Peso', value: '3.500 Kg' },
+                ]
+            },
         ],
     },
     {
@@ -1233,6 +1247,35 @@ export const allProducts = [
     },
 
     // Equipos de Empaque
+    {
+        id: 61,
+        name: 'Emplayadora automática',
+        category: 'Equipos de Empaque',
+        description: '',
+        models: [
+            {
+                code: '1993',
+                brand: 'Xingtai',
+                images: [emplayadoraAutomatica],
+                model: 'TP-1650L',
+                details: [
+                    { label: 'Dimensiones plataforma giratoria', value: '1650 mm' },
+                    { label: 'Altura', value: '85 mm' },
+                    { label: 'Altura de embalaje', value: 'Hasta 2,000 mm' },
+                    { label: 'Rendimiento de embalaje', value: '20-40 pelets/hora' },
+                    { label: 'Velocidad de plataforma giratoria', value: '0-12 rpm, velocidad variable ajustable y paradas suaves' },
+                    { label: 'Carga de plataforma giratoria', value: '2,000 kg' },
+                    { label: 'Material de embalaje', value: 'Film estirable de LLDPE, espesor (T) 17-35 um, ancho (W) 500 mm' },
+                    { label: 'Peso de la máquina', value: 'Aprox. 600 kg' },
+                    { label: 'Tensión/Potencia', value: 'CA 220V, Aprox. 1.5 KW' },
+                    { label: 'Sistema de bastidor', value: 'Bastidor de pelicula preestirada preestirado hasta un 250%, alimentación automática de film' },
+                    { label: 'Columna elevadora', value: 'Estructura doble cadena, velocidad de elevación variable' },
+                    { label: 'Especificaciones de la película', value: 'Película para máquina con ancho de 50 cm' },
+                    { label: 'Sistema de control', value: 'PLC, capas de bobinado y tiempos ajustables, altura de bobinado superior ajustable' },
+                ]
+            },
+        ],
+    },
     {
         id: 37,
         name: 'Despachador de cinta de 2" y 3"',
@@ -1517,7 +1560,7 @@ export const allProducts = [
             {
                 code: '2723',
                 brand: 'E-pac',
-                images: [],
+                images: [aplicadorManualFH2723],
                 model: 'FH-2723',
                 details: [
                     { label: 'Pzas/Caja', value: '75' },
@@ -1536,7 +1579,7 @@ export const allProducts = [
         description: 'Selladora manual de calor directo para bolsas de plástico. Disponible en varios anchos. Voltaje de 110V.',
         models: [
             {
-                code: '2355',
+                code: '2351',
                 // brand: 'Excell',
                 images: [selladoraTermicaEstandar],
                 model: 'ST 15',
@@ -1546,7 +1589,7 @@ export const allProducts = [
                 ]
             },
             {
-                code: '2356',
+                code: '2352',
                 brand: 'Excell',
                 images: [selladoraTermicaEstandar],
                 model: 'ST 25',
@@ -1556,7 +1599,7 @@ export const allProducts = [
                 ]
             },
             {
-                code: '2357',
+                code: '2353',
                 brand: 'E-pac',
                 images: [selladoraTermicaEstandar],
                 model: 'ST 35',
@@ -1566,7 +1609,7 @@ export const allProducts = [
                 ]
             },
             {
-                code: '2358',
+                code: '2354',
                 brand: 'E-pac',
                 images: [selladoraTermicaEstandar],
                 model: 'ST 50',
@@ -1888,40 +1931,58 @@ export const allProducts = [
         ]
     },
     // Consumibles
+    // {
+    //     id: 56,
+    //     name: 'Película Estirable (Playo)',
+    //     category: 'Consumibles',
+    //     description: 'Película estirable para emplayar de aplicación manual. Alta resistencia y elongación. Calibre 60.',
+    //     models: [
+    //         {
+    //             code: '2101',
+    //             brand: 'Ultrex',
+    //             images: [emplaye],
+    //             model: 'Ultrex',
+    //             details: [
+    //                 { label: 'Medida', value: '3" x 1000' },
+    //                 { label: 'Pzas/Caja', value: '4' },
+    //             ]
+    //         },
+    //         {
+    //             code: '2102',
+    //             brand: 'Ultrex',
+    //             images: [emplaye],
+    //             model: 'Ultrex',
+    //             details: [
+    //                 { label: 'Medida', value: '5" x 1000' },
+    //                 { label: 'Pzas/Caja', value: '4' },
+    //             ]
+    //         },
+    //         {
+    //             code: '2103',
+    //             brand: 'Ultrex',
+    //             images: [emplaye],
+    //             model: 'Ultrex',
+    //             details: [
+    //                 { label: 'Medida', value: '18" x 1000' },
+    //                 { label: 'Pzas/Caja', value: '4' },
+    //             ]
+    //         },
+    //     ]
+    // },
     {
         id: 56,
         name: 'Película Estirable (Playo)',
         category: 'Consumibles',
-        description: 'Película estirable para emplayar de aplicación manual. Alta resistencia y elongación. Calibre 60.',
+        description: 'Pelicula Estirable Grado Maquina, 50cm Ancho, 30µm de Espesor, 1000 mts,Peso Por rollo: 15 kg',
         models: [
             {
-                code: '2101',
-                brand: 'Ultrex',
-                images: [emplaye],
-                model: 'Ultrex',
+                code: '2108',
+                brand: '',
+                images: [emplayeGrande],
+                model: 'PEM50100',
                 details: [
-                    { label: 'Medida', value: '3" x 1000' },
-                    { label: 'Pzas/Caja', value: '4' },
-                ]
-            },
-            {
-                code: '2102',
-                brand: 'Ultrex',
-                images: [emplaye],
-                model: 'Ultrex',
-                details: [
-                    { label: 'Medida', value: '5" x 1000' },
-                    { label: 'Pzas/Caja', value: '4' },
-                ]
-            },
-            {
-                code: '2103',
-                brand: 'Ultrex',
-                images: [emplaye],
-                model: 'Ultrex',
-                details: [
-                    { label: 'Medida', value: '18" x 1000' },
-                    { label: 'Pzas/Caja', value: '4' },
+                    { label: 'Medida', value: '50 cm' },
+                    { label: 'Pzas/Caja', value: '1' },
                 ]
             },
         ]
